@@ -200,11 +200,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run 1
+      name: Win 5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 268
+        x: 66
+        y: 156
         width: 14
         height: 15
       alignment: 7
@@ -829,6 +829,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Win 4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 156
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef1a4f3117b1c54d945874a6bcb4da3
+      internalID: 487938531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win 3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 156
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f31639044f1214b80cf1a90886d17a
+      internalID: 434906797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win 2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 156
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4cee2173a099e4499439987c17f6a8
+      internalID: 1499297859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902c11347d4ca5a42975ec438c3ffa82
+      internalID: -1264285248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run 1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 268
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6cc1713862e6e4da2b0213edcc0408
+      internalID: -138785302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -849,6 +954,7 @@ TextureImporter:
       Idle 4: 255167951
       Run 2: -5616389
       Shoot 7: 62832910
+      Win 2: 1499297859
       Run 3: -809296240
       Push 7: 1984250570
       Shoot 8: 1140891881
@@ -858,18 +964,22 @@ TextureImporter:
       Push 1: 1744554143
       Push 3: -410518539
       Shoot 4: -2033572026
+      Win 5: 227668633
       Push 5: 1081897012
       Push 4: -2058934204
+      Win 1: -1264285248
       Shoot 5: 1329715281
       Jump 2: -864494551
       Push 2: -649378492
       Run 4: 405857320
       Run 6: -829089288
       Idle 2: 211309237
-      Run 1: 227668633
       Shoot 1: 974072005
       Shoot 2: 1953492520
       Dead 1: 1088305030
+      Win 3: 434906797
+      Win 4: 487938531
+      Run 1: -138785302
       Idle 1: -1868823521
       Jump 1: -737174538
       Jump 3: -174941774

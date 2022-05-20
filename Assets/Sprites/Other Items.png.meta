@@ -119,10 +119,10 @@ TextureImporter:
       name: Bullet
       rect:
         serializedVersion: 2
-        x: 187
-        y: 193
-        width: 12
-        height: 6
+        x: 188
+        y: 194
+        width: 11
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,7 +145,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
