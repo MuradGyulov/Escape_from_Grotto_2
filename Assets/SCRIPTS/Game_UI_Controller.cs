@@ -11,34 +11,28 @@ public class Game_UI_Controller : MonoBehaviour
     [Space(10)]
     [SerializeField] private GameObject pauseButton;
 
-    private int sceneIndex;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O)) { Delay(); }
-        if (Input.GetKeyDown(KeyCode.P)) { PlayerWin(); }
-    }
 
     private void Start()
     {
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Player_Actions.PlayerIsWin.AddListener(WinDelay);
+        Player_Actions.PlayerIsDead.AddListener(DeadDelay);
     }
 
-
-
-    private void Delay() { Invoke("PlayerDead", 2f); }
+    private void WinDelay() { Invoke("PlayerWin", 2); }
+    private void DeadDelay() { Invoke("PlayerDead", 2); }
 
     public void PauseGame()
     {
         pauseButton.SetActive(false);
         pausePanel.SetActive(true);
         Time.timeScale = 0;
+    }
 
-        AudioSource[] audioSources = GetComponents<AudioSource>();
-        foreach(var audio in audioSources)
-        {
-            audio.Stop();
-        }
+    public void ContinueGame()
+    {
+        pauseButton.SetActive(true);
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void PlayerWin()
@@ -56,13 +50,15 @@ public class Game_UI_Controller : MonoBehaviour
 
 
     public void LoadNextLevel()
-    {     
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex + 1);
         Time.timeScale = 1;
     }
 
     public void RepeatLevel()
     {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex);
         Time.timeScale = 1;
     }

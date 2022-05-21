@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player_Actions : MonoBehaviour
 {
@@ -17,11 +18,15 @@ public class Player_Actions : MonoBehaviour
     [Space(60)]
     [SerializeField] private Transform touchDownSensor;
     [SerializeField] private Transform touchBoxSensor;
-    [SerializeField] private Transform bulletLouncher;
+    [SerializeField] private Transform bulletLauncher;
+    [SerializeField] private Transform sleeveLauncher;
     [Space(10)]
     [SerializeField] private Rigidbody2D rigid2D;
     [SerializeField] private Collider2D boxCollid2D;
     [SerializeField] private Animator animator;
+
+    public static UnityEvent PlayerIsWin = new UnityEvent();
+    public static UnityEvent PlayerIsDead = new UnityEvent();
 
     private Player_Pools playerPools;
 
@@ -29,6 +34,7 @@ public class Player_Actions : MonoBehaviour
     private bool facingRight;
     private bool isGrounded;
     private bool isTouchBox;
+    private bool isWinOrDead;
 
 
     private void Start()
@@ -73,33 +79,73 @@ public class Player_Actions : MonoBehaviour
         PlayerShoot();
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Gates":
+                if (!isWinOrDead)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    isWinOrDead = true;
+                    animator.SetBool("Win", true);
+                    PlayerIsWin.Invoke();                   
+                }
+                break;
+            case "Dangerous":
+                if (!isWinOrDead) 
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    isWinOrDead = true;
+                }               
+                break;
+
+        }
+    }
+
     private void PlayerRun()
     {
-        rigid2D.velocity = new Vector2(Player_Input.Horizontal * runSpeed, rigid2D.velocity.y);
-        animator.SetFloat("Run", Mathf.Abs(Player_Input.Horizontal));
+        if (!isWinOrDead)
+        {
+            rigid2D.velocity = new Vector2(Player_Input.Horizontal * runSpeed, rigid2D.velocity.y);
+            animator.SetFloat("Run", Mathf.Abs(Player_Input.Horizontal));
 
-        if (Player_Input.Horizontal > 0 && facingRight) { PlayerFlip(); }
-        else if (Player_Input.Horizontal < 0 && !facingRight) { PlayerFlip(); }
+            if (Player_Input.Horizontal > 0 && facingRight)
+            {
+                PlayerFlip();
+            }
+            else if (Player_Input.Horizontal < 0 && !facingRight)
+            {
+                PlayerFlip();
+            }
+        }
     }
 
     private void PlayerPush()
     {
-        if (isGrounded && isTouchBox)
+        if (!isWinOrDead)
         {
-            rigid2D.velocity = new Vector2(Player_Input.Horizontal, rigid2D.velocity.y);
-            animator.SetBool("Push", true);
-            boxCollid2D.enabled = true;
-        }
-        else
-        {
-            animator.SetBool("Push", false);
-            boxCollid2D.enabled = false;
+            if (isGrounded && isTouchBox)
+            {
+                rigid2D.velocity = new Vector2(Player_Input.Horizontal, rigid2D.velocity.y);
+                animator.SetBool("Push", true);
+                boxCollid2D.enabled = true;
+            }
+            else
+            {
+                animator.SetBool("Push", false);
+                boxCollid2D.enabled = false;
+            }
         }
     }
 
     private void PlayerJump()
     {
-        if (isGrounded)
+        if (isGrounded && !isWinOrDead)
         {
             rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
@@ -108,7 +154,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerShoot()
     {
-        if (isGrounded && Player_Input.IsFire)
+        if (isGrounded && Player_Input.IsFire && !isWinOrDead)
         {
             animator.SetBool("Shoot", true);
             rigid2D.velocity = Vector2.zero;
@@ -117,10 +163,21 @@ public class Player_Actions : MonoBehaviour
             {
                 nextShoot = Time.time + fireRate;
 
-                GameObject bullet = playerPools.GetPolledBullet();
-                bullet.transform.position = bulletLouncher.position;
-                bullet.transform.rotation = bulletLouncher.rotation;
-                bullet.SetActive(true);
+                GameObject bullet = playerPools.GetPooledBullet();
+                if(bullet != null)
+                {
+                    bullet.transform.position = bulletLauncher.position;
+                    bullet.transform.rotation = bulletLauncher.rotation;
+                    bullet.SetActive(true);
+                }
+
+                GameObject sleeve = playerPools.GetPooledSleeve();
+                if(sleeve != null)
+                {
+                    sleeve.transform.position = sleeveLauncher.position;
+                    sleeve.transform.rotation = sleeveLauncher.rotation;
+                    sleeve.SetActive(true);
+                }
             }
         }
         else
@@ -129,22 +186,26 @@ public class Player_Actions : MonoBehaviour
         }
     }
 
-    private void PlayerWin()
-    {
-        animator.SetBool("Win", true);
-    }
-
-    private void PlayerDead()
-    {
-        animator.SetBool("Dead", true);
-    }
-
     private void PlayerFlip()
     {
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        if (!isWinOrDead)
+        {
+            facingRight = !facingRight;
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+
+            if (transform.localScale.x == 1) 
+            {
+                bulletLauncher.eulerAngles = new Vector3(0, 0, 0);
+                sleeveLauncher.eulerAngles = new Vector3(0, 0, 10);
+            }
+            else if (transform.localScale.x == -1) 
+            {
+                bulletLauncher.eulerAngles = new Vector3(0, 180, 0);
+                sleeveLauncher.eulerAngles = new Vector3(0, 180, 10);
+            }
+        }
     }
 
     private void OnDrawGizmos()

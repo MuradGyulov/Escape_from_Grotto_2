@@ -93,6 +93,37 @@ Transform:
   m_Father: {fileID: 8311731028676706930}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6781814091399115444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833921533588953781}
+  m_Layer: 10
+  m_Name: Sleeve Launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1833921533588953781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781814091399115444}
+  m_LocalRotation: {x: 0, y: 0, z: 0.06104851, w: 0.99813485}
+  m_LocalPosition: {x: 0.32, y: 0.468, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8311731028676706930}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7}
 --- !u!1 &8311731028676706926
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +163,7 @@ Transform:
   - {fileID: 6849626908350883890}
   - {fileID: 1655527787606789558}
   - {fileID: 5831103703545456423}
+  - {fileID: 1833921533588953781}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1868823521, guid: a8311726ab4becb4ba202b5bbd389c0f, type: 3}
+  m_Sprite: {fileID: 866981915, guid: a8311726ab4becb4ba202b5bbd389c0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,7 +293,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.625, y: 0.9375}
+    oldSize: {x: 2.5, y: 0.9375}
     newSize: {x: 0.625, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -308,7 +340,8 @@ MonoBehaviour:
     m_Bits: 4096
   touchDownSensor: {fileID: 6849626908350883890}
   touchBoxSensor: {fileID: 1655527787606789558}
-  bulletLouncher: {fileID: 5831103703545456423}
+  bulletLauncher: {fileID: 5831103703545456423}
+  sleeveLauncher: {fileID: 1833921533588953781}
   rigid2D: {fileID: 8311731028676706928}
   boxCollid2D: {fileID: 4595148807414568924}
   animator: {fileID: 8311731028676706933}
@@ -326,4 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammountInBulletsPool: 10
   pooledBullets: []
+  ammountInSleeversPool: 10
+  pooledSleevers: []
   bulletPrefab: {fileID: 4316103109101894210, guid: 4abe661c1da584d4b9319138caa77fd1, type: 3}
+  sleevePrefab: {fileID: 4293547130518772833, guid: cec3b892c224e004d85b697a96e436f1, type: 3}

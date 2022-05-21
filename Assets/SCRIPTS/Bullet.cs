@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet_Controller : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
@@ -21,8 +21,8 @@ public class Bullet_Controller : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    //private void OnDestroy()
-    //{
-
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        gameObject.SetActive(false);
+    }
 }
