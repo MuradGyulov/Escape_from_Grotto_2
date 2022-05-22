@@ -131,7 +131,7 @@ public class Player_Actions : MonoBehaviour
         {
             if (isGrounded && isTouchBox)
             {
-                rigid2D.velocity = new Vector2(Player_Input.Horizontal, rigid2D.velocity.y);
+                rigid2D.velocity = new Vector2(Player_Input.Horizontal * 2, rigid2D.velocity.y);
                 animator.SetBool("Push", true);
                 boxCollid2D.enabled = true;
             }
@@ -198,12 +198,12 @@ public class Player_Actions : MonoBehaviour
             if (transform.localScale.x == 1) 
             {
                 bulletLauncher.eulerAngles = new Vector3(0, 0, 0);
-                sleeveLauncher.eulerAngles = new Vector3(0, 0, 10);
+                sleeveLauncher.eulerAngles = new Vector3(0, 0, 12);
             }
             else if (transform.localScale.x == -1) 
             {
                 bulletLauncher.eulerAngles = new Vector3(0, 180, 0);
-                sleeveLauncher.eulerAngles = new Vector3(0, 180, 10);
+                sleeveLauncher.eulerAngles = new Vector3(0, 180, 12);
             }
         }
     }
