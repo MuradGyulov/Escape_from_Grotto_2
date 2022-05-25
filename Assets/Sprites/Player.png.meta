@@ -934,6 +934,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Climbing 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f88b69e462ee374b9d9e25f738aa214
+      internalID: 895235243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing 2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 140
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d04de10661c244286839c1bb73ff4e
+      internalID: 1166144628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -946,44 +988,51 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Push 8: -1893648992
-      Run 8: 158094754
-      Shoot 10: 1738386396
       Run 7: -86104902
       Run 5: 418289916
       Shoot 6: 30013131
       Idle 4: 255167951
       Run 2: -5616389
       Shoot 7: 62832910
-      Win 2: 1499297859
+      Climbing 5: -352789134
       Run 3: -809296240
-      Push 7: 1984250570
+      Climbing 4: -1456764065
+      Push 6: -661980921
+      Win 5: 227668633
+      Push 5: 1081897012
+      Shoot 5: 1329715281
+      Climbing 3: 1373739441
+      Jump 2: -864494551
+      Run 6: -829089288
+      Win 4: 487938531
+      Win 3: 434906797
+      Idle 1: -1868823521
+      Jump 1: -737174538
+      Shoot 9: 866981915
+      Run 8: 158094754
+      Shoot 10: 1738386396
+      Climbing 6: 1524287949
       Shoot 8: 1140891881
+      Climbing 2: 1166144628
+      Win 2: 1499297859
+      Push 7: 1984250570
       Shoot 3: -1909003542
       Idle 3: 377216517
-      Push 6: -661980921
       Push 1: 1744554143
       Push 3: -410518539
       Shoot 4: -2033572026
-      Win 5: 227668633
-      Push 5: 1081897012
       Push 4: -2058934204
       Win 1: -1264285248
-      Shoot 5: 1329715281
-      Jump 2: -864494551
       Push 2: -649378492
       Run 4: 405857320
-      Run 6: -829089288
       Idle 2: 211309237
       Shoot 1: 974072005
       Shoot 2: 1953492520
       Dead 1: 1088305030
-      Win 3: 434906797
-      Win 4: 487938531
       Run 1: -138785302
-      Idle 1: -1868823521
-      Jump 1: -737174538
+      Climbing 1: 895235243
+      Climbing 7: -1199116729
       Jump 3: -174941774
-      Shoot 9: 866981915
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

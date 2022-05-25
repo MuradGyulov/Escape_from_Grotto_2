@@ -7,6 +7,7 @@ public class Player_Actions : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
     [SerializeField] private float runSpeed;
+    [SerializeField] private float climbingSpeed;
     [SerializeField] private float fireRate;
     [SerializeField] private float bulletSpeed;
     [Space(10)]
@@ -33,6 +34,8 @@ public class Player_Actions : MonoBehaviour
     private float nextShoot;
     private bool facingRight;
     private bool isGrounded;
+    private bool isPaused;
+    private bool onLadders;
     private bool isTouchBox;
     private bool isWinOrDead;
 
@@ -77,6 +80,7 @@ public class Player_Actions : MonoBehaviour
         PlayerRun();
         PlayerPush();
         PlayerShoot();
+        PlayerClimbing();
     }
 
 
@@ -103,8 +107,16 @@ public class Player_Actions : MonoBehaviour
                     isWinOrDead = true;
                 }               
                 break;
-
+            case "Ladders":
+                onLadders = true;
+                break;
         }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        onLadders = false;
     }
 
     private void PlayerRun()
@@ -122,6 +134,21 @@ public class Player_Actions : MonoBehaviour
             {
                 PlayerFlip();
             }
+        }
+    }
+
+    private void PlayerClimbing()
+    {
+        if (onLadders && Player_Input.Vertical > 0)
+        {
+            rigid2D.gravityScale = 0;
+            animator.SetFloat("Climbing", Mathf.Abs(Player_Input.Vertical));
+            rigid2D.velocity = new Vector2(rigid2D.velocity.x, climbingSpeed);
+        }
+        else
+        {
+            animator.SetFloat("Climbing", 0);
+            rigid2D.gravityScale = 3;
         }
     }
 
@@ -145,7 +172,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerJump()
     {
-        if (isGrounded && !isWinOrDead)
+        if (isGrounded && !isPaused && !isWinOrDead)
         {
             rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
