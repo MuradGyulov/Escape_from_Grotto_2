@@ -12,13 +12,13 @@ public class Sleeve : MonoBehaviour
 
     private void OnEnable()
     {
-        float randomForce = Random.Range(minForce, maxForce);
-        rigidbod2D.AddForce(transform.up * randomForce, ForceMode2D.Impulse);
-        Invoke("SleeveDeactivate", sleeveLifetime);
+        rigidbod2D.AddForce(transform.up * Random.Range(minForce, maxForce), ForceMode2D.Impulse);
+        StartCoroutine(SleeveDisabele());
     }
 
-    private void SleeveDeactivate()
+    private IEnumerator SleeveDisabele()
     {
+        yield return new WaitForSeconds(sleeveLifetime);
         gameObject.SetActive(false);
     }
 }

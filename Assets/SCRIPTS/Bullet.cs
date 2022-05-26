@@ -13,15 +13,16 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         rigidbod.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
-        Invoke("BulletDeactivate", bulletLifeTime);
+        StartCoroutine(BulletDisable());
     }
 
-    private void BulletDeactivate()
+    private IEnumerator BulletDisable()
     {
+        yield return new WaitForSeconds(bulletLifeTime);
         gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         gameObject.SetActive(false);
     }

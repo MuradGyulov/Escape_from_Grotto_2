@@ -331,7 +331,7 @@ MonoBehaviour:
   climbingSpeed: 3
   fireRate: 1
   bulletSpeed: 36
-  touchDownSensorRadius: 0.16
+  touchDownSensorRadius: 0.14
   boxTouchSensorRadius: 0.1
   whatIsGround:
     serializedVersion: 2
