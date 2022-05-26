@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6602c46bf69a2554688beab719e3e9f5
+guid: dd62f691dea1e9446bb32f609913e028
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - NicoClean
+  - Chixa
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

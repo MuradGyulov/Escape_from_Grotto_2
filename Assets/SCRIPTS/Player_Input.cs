@@ -12,17 +12,11 @@ public class Player_Input : MonoBehaviour
 
     public static UnityEvent IsJump = new UnityEvent();
 
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) { IsJump.Invoke(); }       
-    }
-
-    private void FixedUpdate()
-    {
+        if (Input.GetKeyDown(KeyCode.Space)) { IsJump.Invoke(); }
+        if (Input.GetMouseButton(0)) { IsFire = true; } else { IsFire = false; }
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetMouseButton(0)) { IsFire = true; }else { IsFire = false; }
     }
 }
