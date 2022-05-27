@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game_UI_Controller : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class Game_UI_Controller : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [Space(10)]
     [SerializeField] private GameObject pauseButton;
+    [SerializeField] private Text levelNumberIndicator;
 
 
     private void Start()
     {
         Player_Actions.PlayerIsWin.AddListener(WinDelay);
         Player_Actions.PlayerIsDead.AddListener(DeadDelay);
+
+        levelNumberIndicator.text = "Level:" + SceneManager.GetActiveScene().buildIndex;
     }
 
     private void WinDelay() { Invoke("PlayerWin", 2); }

@@ -14,16 +14,22 @@ public class Player_Actions : MonoBehaviour
     [Space(10)]
     [SerializeField] private float touchDownSensorRadius;
     [SerializeField] private float boxTouchSensorRadius;
-    [Space(8)]
+    [Space(10)]
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsBox;
     [Space(60)]
+    [SerializeField] private AudioClip shootingSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip winSound;
+    [Space(10)]
     [SerializeField] private Transform touchDownSensor;
     [SerializeField] private Transform touchBoxSensor;
     [SerializeField] private Transform bulletLauncher;
     [SerializeField] private Transform sleeveLauncher;
     [Space(10)]
     [SerializeField] private Rigidbody2D rigid2D;
+    [SerializeField] private AudioSource audios;
     [SerializeField] private Collider2D boxCollid2D;
     [SerializeField] private Animator animator;
 
@@ -78,6 +84,7 @@ public class Player_Actions : MonoBehaviour
             }
         }
 
+
         PlayerRun();
         PlayerPush();
         PlayerShoot();
@@ -94,6 +101,7 @@ public class Player_Actions : MonoBehaviour
                 {
                     rigid2D.velocity = Vector2.zero;
                     isWinOrDead = true;
+                    if (!audios.isPlaying) { audios.PlayOneShot(winSound); }
                     animator.SetBool("Win", true);
                     PlayerIsWin.Invoke();                   
                 }
@@ -102,6 +110,7 @@ public class Player_Actions : MonoBehaviour
                 if (!isWinOrDead) 
                 {
                     rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
                     rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                     animator.SetBool("Dead", true);
                     PlayerIsDead.Invoke();
@@ -175,6 +184,10 @@ public class Player_Actions : MonoBehaviour
     {
         if (isGrounded && !isPaused && !isWinOrDead)
         {
+            if(!audios.isPlaying)
+            {
+                audios.PlayOneShot(jumpSound);
+            }
             rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
         }
@@ -196,6 +209,7 @@ public class Player_Actions : MonoBehaviour
                 {
                     bullet.transform.position = bulletLauncher.position;
                     bullet.transform.rotation = bulletLauncher.rotation;
+                    if (!audios.isPlaying) { audios.PlayOneShot(shootingSound); }
                     bullet.SetActive(true);
                 }
 
