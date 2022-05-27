@@ -389,48 +389,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump 2
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 252
-        width: 14
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c7db0ebe3ffb5549b472f4bf3499582
-      internalID: -864494551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump 3
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 252
-        width: 14
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d61879102add7124492fb6dad4a3f365
-      internalID: -174941774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Shoot 1
       rect:
         serializedVersion: 2

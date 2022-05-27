@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 10
   runSpeed: 3.5
+  boxPooshSpeed: 2.2
   climbingSpeed: 3
   fireRate: 1
   bulletSpeed: 36

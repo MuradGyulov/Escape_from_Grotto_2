@@ -7,6 +7,7 @@ public class Player_Actions : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
     [SerializeField] private float runSpeed;
+    [SerializeField] private float boxPooshSpeed;
     [SerializeField] private float climbingSpeed;
     [SerializeField] private float fireRate;
     [SerializeField] private float bulletSpeed;
@@ -158,7 +159,7 @@ public class Player_Actions : MonoBehaviour
         {
             if (isGrounded && isTouchBox)
             {
-                rigid2D.velocity = new Vector2(Player_Input.Horizontal * 2, rigid2D.velocity.y);
+                rigid2D.velocity = new Vector2(Player_Input.Horizontal  * boxPooshSpeed, rigid2D.velocity.y);
                 animator.SetBool("Push", true);
                 boxCollid2D.enabled = true;
             }
