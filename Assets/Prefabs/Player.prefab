@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 1899152520}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,6 +449,7 @@ MonoBehaviour:
   audios: {fileID: 5352058457272917958}
   boxCollid2D: {fileID: 4595148807414568924}
   animator: {fileID: 8311731028676706933}
+  isStop: 0
 --- !u!114 &1899152520
 MonoBehaviour:
   m_ObjectHideFlags: 0

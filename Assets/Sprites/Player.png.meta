@@ -829,6 +829,363 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Start cutscene 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3855b0a1aae6f49a205f87e805ad9f
+      internalID: -654076373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f25f5184b03404580de59bc8b6876b
+      internalID: 1489599847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7026f2d914d1db741bf7f0d4ff8d880c
+      internalID: 10890616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7292112d5182367479f7c40472aa7069
+      internalID: 1626495914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e236935d0f156d4418f8b71bed52d492
+      internalID: -476941187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc70dcd2ada7f948aa097a334dd4719
+      internalID: -1771294885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15157354deeee2e4e8ab54661e3b948f
+      internalID: 1722367175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca0f244c209fd14f83dbea6ec2db678
+      internalID: 1998760378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f768b369cc7df12478d204cdac9508ef
+      internalID: 1031375470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0450663535f6dd747b32e4b1beed35e1
+      internalID: 1805087275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd65ff43be258f4b833c8cbbc8557bc
+      internalID: 622765085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 12
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 124
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65d2a2166fc6b64baecae9227f27b4b
+      internalID: 922655713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 108
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3a3da57921d2646a487154ed94ea74
+      internalID: -1140227321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 108
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f18423cff713fa4ea122bd81a481b5e
+      internalID: 1827755565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 15
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 108
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb4ee10ff43aa748b69bbd244c5d710
+      internalID: 1405944242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 108
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab15d925db4f7a04d920a511153c5fd2
+      internalID: -1906763177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start cutscene 17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 108
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9498819c181ea7d488c1281e6a6dedf3
+      internalID: -1025509862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -841,6 +1198,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Push 8: -1893648992
+      Start cutscene 9: 1031375470
       Run 7: -86104902
       Run 5: 418289916
       Shoot 6: 30013131
@@ -849,37 +1207,55 @@ TextureImporter:
       Shoot 7: 62832910
       Climbing 5: -352789134
       Run 3: -809296240
+      Start cutscene 3: 10890616
       Climbing 4: -1456764065
+      Start cutscene 18: -1021148181
       Push 6: -661980921
+      Start cutscene 10: 1805087275
+      Start cutscene 15: 1405944242
       Win 5: 227668633
       Push 5: 1081897012
+      Start cutscene 16: -1906763177
+      Start cutscene 1: -654076373
       Shoot 5: 1329715281
       Climbing 3: 1373739441
       Jump 2: -864494551
+      Start cutscene 2: 1489599847
+      Start cutscene 6: -1771294885
       Run 6: -829089288
+      Start cutscene 8: 1998760378
       Win 4: 487938531
       Win 3: 434906797
+      Start cutscene 11: 622765085
+      Start cutscene 13: -1140227321
+      Start cutscene 14: 1827755565
       Idle 1: -1868823521
       Jump 1: -737174538
       Shoot 9: 866981915
+      Player cutscene 19: -2103964419
       Run 8: 158094754
       Shoot 10: 1738386396
       Climbing 6: 1524287949
       Shoot 8: 1140891881
       Climbing 2: 1166144628
+      Start cutscene 7: 1722367175
       Win 2: 1499297859
       Push 7: 1984250570
       Shoot 3: -1909003542
       Idle 3: 377216517
+      Start cutscene 5: -476941187
       Push 1: 1744554143
       Push 3: -410518539
       Shoot 4: -2033572026
+      Start cutscene 12: 922655713
       Push 4: -2058934204
       Win 1: -1264285248
       Push 2: -649378492
+      Start cutscene 4: 1626495914
       Run 4: 405857320
       Idle 2: 211309237
       Shoot 1: 974072005
+      Start cutscene 17: -1025509862
       Shoot 2: 1953492520
       Dead 1: 1088305030
       Run 1: -138785302

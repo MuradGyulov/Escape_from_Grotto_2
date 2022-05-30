@@ -35,6 +35,7 @@ public class Player_Actions : MonoBehaviour
 
     public static UnityEvent PlayerIsWin = new UnityEvent();
     public static UnityEvent PlayerIsDead = new UnityEvent();
+    public static UnityEvent DialogIsBegin = new UnityEvent();
 
     private Player_Pools playerPools;
 
@@ -44,7 +45,7 @@ public class Player_Actions : MonoBehaviour
     private bool isPaused;
     private bool onLadders;
     private bool isTouchBox;
-    private bool isWinOrDead;
+    [HideInInspector] public bool isStop;
 
 
     private void Start()
@@ -97,28 +98,34 @@ public class Player_Actions : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Gates":
-                if (!isWinOrDead)
+                if (!isStop)
                 {
                     rigid2D.velocity = Vector2.zero;
-                    isWinOrDead = true;
+                    isStop = true;
                     if (!audios.isPlaying) { audios.PlayOneShot(winSound); }
                     animator.SetBool("Win", true);
                     PlayerIsWin.Invoke();                   
                 }
                 break;
             case "Dangerous":
-                if (!isWinOrDead) 
+                if (!isStop) 
                 {
                     rigid2D.velocity = Vector2.zero;
                     if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
                     rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                     animator.SetBool("Dead", true);
                     PlayerIsDead.Invoke();
-                    isWinOrDead = true;
+                    isStop = true;
                 }               
                 break;
             case "Ladders":
                 onLadders = true;
+                break;
+            case "Dialog Point":
+                rigid2D.velocity = Vector2.zero;
+                animator.SetFloat("Run", 0);
+                isStop = true;
+                Destroy(collision.gameObject);
                 break;
         }
     }
@@ -131,7 +138,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerRun()
     {
-        if (!isWinOrDead)
+        if (!isStop)
         {
             rigid2D.velocity = new Vector2(Player_Input.Horizontal * runSpeed, rigid2D.velocity.y);
             animator.SetFloat("Run", Mathf.Abs(Player_Input.Horizontal));
@@ -164,7 +171,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerPush()
     {
-        if (!isWinOrDead)
+        if (!isStop)
         {
             if (isGrounded && isTouchBox)
             {
@@ -182,7 +189,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerJump()
     {
-        if (isGrounded && !isPaused && !isWinOrDead)
+        if (isGrounded && !isPaused && !isStop)
         {
             if(!audios.isPlaying)
             {
@@ -195,7 +202,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerShoot()
     {
-        if (isGrounded && Player_Input.IsFire && !isWinOrDead)
+        if (isGrounded && Player_Input.IsFire && !isStop)
         {
             animator.SetBool("Shoot", true);
             rigid2D.velocity = Vector2.zero;
@@ -230,7 +237,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerFlip()
     {
-        if (!isWinOrDead)
+        if (!isStop)
         {
             facingRight = !facingRight;
             Vector3 theScale = transform.localScale;

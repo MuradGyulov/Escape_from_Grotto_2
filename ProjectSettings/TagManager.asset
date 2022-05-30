@@ -7,6 +7,7 @@ TagManager:
   - Gates
   - Dangerous
   - Ladders
+  - Dialog Point
   layers:
   - Default
   - TransparentFX
