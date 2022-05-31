@@ -31,11 +31,12 @@ public class Player_Actions : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid2D;
     [SerializeField] private AudioSource audios;
     [SerializeField] private Collider2D boxCollid2D;
+    [SerializeField] private CapsuleCollider2D capsulCollid2D;
     [SerializeField] private Animator animator;
 
     public static UnityEvent PlayerIsWin = new UnityEvent();
     public static UnityEvent PlayerIsDead = new UnityEvent();
-    public static UnityEvent DialogIsBegin = new UnityEvent();
+    public static UnityEvent<string> VideoTrigger = new UnityEvent<string>();
 
     private Player_Pools playerPools;
 
@@ -115,18 +116,21 @@ public class Player_Actions : MonoBehaviour
                     rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                     animator.SetBool("Dead", true);
                     PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
                     isStop = true;
                 }               
                 break;
             case "Ladders":
                 onLadders = true;
-                break;
-            case "Dialog Point":
-                rigid2D.velocity = Vector2.zero;
-                animator.SetFloat("Run", 0);
-                isStop = true;
-                Destroy(collision.gameObject);
-                break;
+                break;          
+        }
+
+        if(collision.gameObject.name == "Video Trigger")
+        {
+            rigid2D.velocity = Vector2.zero;
+            animator.SetFloat("Run", 0);
+            VideoTrigger.Invoke(collision.gameObject.tag);
+            Destroy(collision.gameObject);
         }
     }
 

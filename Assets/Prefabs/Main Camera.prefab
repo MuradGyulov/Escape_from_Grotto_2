@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followingSpeed: 0.06
+  followingSpeed: 0.1
   cameraOffset: {x: 0, y: 0, z: -10}
 --- !u!95 &1736001693
 Animator:

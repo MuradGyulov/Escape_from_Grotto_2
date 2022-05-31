@@ -448,6 +448,7 @@ MonoBehaviour:
   rigid2D: {fileID: 8311731028676706928}
   audios: {fileID: 5352058457272917958}
   boxCollid2D: {fileID: 4595148807414568924}
+  capsulCollid2D: {fileID: 8311731028676706929}
   animator: {fileID: 8311731028676706933}
   isStop: 0
 --- !u!114 &1899152520
