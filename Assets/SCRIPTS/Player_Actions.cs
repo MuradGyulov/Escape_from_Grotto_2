@@ -11,6 +11,8 @@ public class Player_Actions : MonoBehaviour
     [SerializeField] private float climbingSpeed;
     [SerializeField] private float fireRate;
     [SerializeField] private float bulletSpeed;
+    [Space(5)]
+    [SerializeField] private bool canShoot;
     [Space(10)]
     [SerializeField] private float touchDownSensorRadius;
     [SerializeField] private float boxTouchSensorRadius;
@@ -124,14 +126,6 @@ public class Player_Actions : MonoBehaviour
                 onLadders = true;
                 break;          
         }
-
-        if(collision.gameObject.name == "Video Trigger")
-        {
-            rigid2D.velocity = Vector2.zero;
-            animator.SetFloat("Run", 0);
-            VideoTrigger.Invoke(collision.gameObject.tag);
-            Destroy(collision.gameObject);
-        }
     }
 
 
@@ -177,7 +171,7 @@ public class Player_Actions : MonoBehaviour
     {
         if (!isStop)
         {
-            if (isGrounded && isTouchBox)
+            if (isGrounded && isTouchBox && Player_Input.Horizontal != 0)
             {
                 rigid2D.velocity = new Vector2(Player_Input.Horizontal  * boxPooshSpeed, rigid2D.velocity.y);
                 animator.SetBool("Push", true);
@@ -206,7 +200,7 @@ public class Player_Actions : MonoBehaviour
 
     private void PlayerShoot()
     {
-        if (isGrounded && Player_Input.IsFire && !isStop)
+        if (isGrounded && Player_Input.IsFire && !isStop && canShoot)
         {
             animator.SetBool("Shoot", true);
             rigid2D.velocity = Vector2.zero;

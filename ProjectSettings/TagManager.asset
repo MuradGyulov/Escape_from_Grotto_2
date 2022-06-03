@@ -9,6 +9,7 @@ TagManager:
   - Ladders
   - Dialog Point
   - Video Trigger Level 1.  (2)
+  - Stalagmit Sensor
   layers:
   - Default
   - TransparentFX

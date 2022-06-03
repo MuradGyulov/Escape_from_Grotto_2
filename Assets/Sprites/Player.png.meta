@@ -1186,6 +1186,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Watch left
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 92
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271af79f3724273458851f4dd74c501c
+      internalID: -456020579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watch right
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 92
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d7f6767b8f2a64b9f420021316d920
+      internalID: -1472247112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1242,6 +1284,7 @@ TextureImporter:
       Win 2: 1499297859
       Push 7: 1984250570
       Shoot 3: -1909003542
+      Watch right: -1472247112
       Idle 3: 377216517
       Start cutscene 5: -476941187
       Push 1: 1744554143
@@ -1250,6 +1293,7 @@ TextureImporter:
       Start cutscene 12: 922655713
       Push 4: -2058934204
       Win 1: -1264285248
+      Watch left: -456020579
       Push 2: -649378492
       Start cutscene 4: 1626495914
       Run 4: 405857320
