@@ -694,6 +694,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Slug engry idle 1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c914651559d3faf4087ab2071794fe0e
+      internalID: 336098064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug engry idle 2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d0a2e4201b3c9418fee0584a547a12
+      internalID: -232815984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug engry idle 3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878c5c6ed20ca1340a78512b7b437908
+      internalID: -1823450262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug engry idle 4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8c62cf1d3bca2488aca1dc225a313d
+      internalID: 252735081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slug engry idle 5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769bcd5e78631c44ca6a6f600a2c16f6
+      internalID: 1273857920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -711,21 +816,26 @@ TextureImporter:
       Slug move 4: 1572873523
       Slug move 2: 1954744400
       Slug move 1: -422226433
+      Slug engry idle 3: -1823450262
       Slug idle 3: 1622471572
+      Slug engry idle 5: 1273857920
       Slug dead 11: 110440351
       Slug engry move 2: 2105548414
       Slug engry move 1: -1279001668
       Slug idle 2: 2142360828
       Slug dead 7: -349801653
+      Slug engry idle 1: 336098064
       Slug dead 4: 1568439010
       Slug dead 8: 1005911011
       Slug dead 9: 1347986922
+      Slug engry idle 2: -232815984
       Slug idle 1: 1591249855
       Slug move 3: -546755600
       Slug dead 2: 500052534
       Slug dead 12: 135034999
       Slug dead 1: -1723836886
       Slug dead 6: -1158335558
+      Slug engry idle 4: 252735081
       Slug dead 5: 1433517161
       Slug dead 10: 1323462793
       Slug move 6: 111270437

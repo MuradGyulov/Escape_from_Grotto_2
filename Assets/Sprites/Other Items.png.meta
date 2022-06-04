@@ -220,6 +220,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Exclamation Mark
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 184
+        width: 2
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b210abbc7f89e4aa08a8ec25ca2a34
+      internalID: 2077319375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -236,6 +257,7 @@ TextureImporter:
       Bullet: -1329725105
       Stalagmite 2: 38347685
       Box: -1739997020
+      Exclamation Mark: 2077319375
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

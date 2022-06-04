@@ -10,6 +10,8 @@ TagManager:
   - Dialog Point
   - Video Trigger Level 1.  (2)
   - Stalagmit Sensor
+  - Bullet
+  - Slug
   layers:
   - Default
   - TransparentFX
