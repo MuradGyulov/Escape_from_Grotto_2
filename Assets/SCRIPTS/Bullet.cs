@@ -6,12 +6,18 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
+    [Space(10)]
+    [SerializeField] private ParticleSystem groundImpactParticles;
     [Space(20)]
     [SerializeField] private Rigidbody2D rigidbod;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
 
     private void OnEnable()
     {
+        rigidbod.bodyType = RigidbodyType2D.Dynamic;
+        spriteRenderer.enabled = true;
+
         rigidbod.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
         StartCoroutine(BulletDisable());
     }
@@ -27,19 +33,27 @@ public class Bullet : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Ground":
-                gameObject.SetActive(false);
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                spriteRenderer.enabled = false;
+                groundImpactParticles.Play();
                 break;
             case "Slug":
                 gameObject.SetActive(false);
                 break;
             case "Box":
-                gameObject.SetActive(false);
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                spriteRenderer.enabled = false;
+                groundImpactParticles.Play();
                 break;
             case "Stalagmit":
-                gameObject.SetActive(false);
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                spriteRenderer.enabled = false;
+                groundImpactParticles.Play();
                 break;
             case "Gates":
-                gameObject.SetActive(false);
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                spriteRenderer.enabled = false;
+                groundImpactParticles.Play();
                 break;
         }
     }
