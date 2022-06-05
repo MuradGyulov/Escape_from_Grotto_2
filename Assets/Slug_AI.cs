@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Slug_AI : MonoBehaviour
 {
-    //[Tooltip("Hello There!")]
-    [SerializeField] private bool idle;
-    [SerializeField] private bool pasivePatrol;
+    [SerializeField] private bool standStill;
+    [SerializeField] private bool passivePatrol;
     [SerializeField] private bool activePatrol;
     [Space(10)]
-    [SerializeField] private int health;
-    [SerializeField] private float movingSpeed;
-    [SerializeField] private float movingSpeedInAngryState;
-    [SerializeField] private float angryStateDuration;
-    [SerializeField] private float hitFlashDuriation;
-    [SerializeField] private Color hitFlashColor;
+    [SerializeField] Transform target;
     [Space(10)]
+    [SerializeField] private int maximumHealth;
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float hitEffectDuration;
+    [SerializeField] private Color hitEffectColor;
     [SerializeField] private float groundSensorRadius;
     [SerializeField] private float chaseSensorRadius;
     [SerializeField] private float attackSensorRadius;
@@ -23,32 +21,27 @@ public class Slug_AI : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whoIsPlayer;
     [Space(25)]
-    [SerializeField] Transform groundSensor;
+    [SerializeField] Transform groundSensorPointer;
     [SerializeField] Transform attackSensorsPointer;
-    [SerializeField] Transform target;
     [Space(8)]
-    [SerializeField] private Material hitFlashMateria;
-    [SerializeField] private Rigidbody2D rigidBody;
-    [SerializeField] private Animator slugAnimator;
-    [SerializeField] private CircleCollider2D circleCollider;
+    [SerializeField] private Material hitEffectMaterial;
     [SerializeField] private CapsuleCollider2D capsulCollider;
+    [SerializeField] private CircleCollider2D circleCollider;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Rigidbody2D rigidBody;
+    [SerializeField] private Animator animator;
 
     private Material originalMaterial;
 
     private bool facingRight = true;
-    private bool sensorOnGround = true;
-    private bool targetCapture = false;
-    private bool canChase = false;
+    private bool sensorInGround = true;
+    private bool targetCaptured = false;
+    private bool mayChase = false;
     private bool slugIsDead = false;
-    private bool angryStateBeforeHit = false;
-
-    private float originalSpeed;
 
     private void Start()
     {
         originalMaterial = spriteRenderer.material;
-        originalSpeed = movingSpeed;
     }
 
 
@@ -56,53 +49,53 @@ public class Slug_AI : MonoBehaviour
     {
         if (!slugIsDead)
         {
-            sensorOnGround = Physics2D.OverlapCircle(groundSensor.position, groundSensorRadius, whatIsGround);
-            targetCapture = Physics2D.OverlapCircle(attackSensorsPointer.position, attackSensorRadius, whoIsPlayer);
-            canChase = Physics2D.OverlapCircle(attackSensorsPointer.position, chaseSensorRadius, whoIsPlayer);
+            sensorInGround = Physics2D.OverlapCircle(groundSensorPointer.position, groundSensorRadius, whatIsGround);
+            targetCaptured = Physics2D.OverlapCircle(attackSensorsPointer.position, attackSensorRadius, whoIsPlayer);
+            mayChase = Physics2D.OverlapCircle(attackSensorsPointer.position, chaseSensorRadius, whoIsPlayer);
 
-            if (idle)
+            if (standStill)
             {
                 rigidBody.velocity = Vector2.zero;
-                slugAnimator.SetFloat("Move", 0);
+                animator.SetFloat("Move", 0);
             }
-            else if (pasivePatrol)
+            else if (passivePatrol)
             {
-                rigidBody.velocity = new Vector2(movingSpeed, rigidBody.velocity.y);
-                slugAnimator.SetFloat("Move", Mathf.Abs(movingSpeed));
+                rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
+                animator.SetFloat("Move", Mathf.Abs(movementSpeed));
 
-                if (!sensorOnGround)
+                if (!sensorInGround)
                 {
                     SlugFlip();
-                    movingSpeed *= -1;
+                    movementSpeed *= -1;
                 }
             }
             else if (activePatrol)
             {
-                rigidBody.velocity = new Vector2(movingSpeed, rigidBody.velocity.y);
-                slugAnimator.SetFloat("Move", Mathf.Abs(movingSpeed));
+                rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
+                animator.SetFloat("Move", Mathf.Abs(movementSpeed));
 
-                if (!sensorOnGround && !canChase)
+                if (!sensorInGround && !mayChase)
                 {
                     SlugFlip();
-                    movingSpeed *= -1;
+                    movementSpeed *= -1;
                 }
-                else if (!sensorOnGround && canChase)
+                else if (!sensorInGround && mayChase)
                 {
-                    slugAnimator.SetFloat("Move", 0);
+                    animator.SetFloat("Move", 0);
                     rigidBody.velocity = Vector2.zero;
                 }
 
-                if (targetCapture)
+                if (targetCaptured)
                 {
                     if (target.position.x < transform.position.x && facingRight)
                     {
                         SlugFlip();
-                        movingSpeed *= -1;
+                        movementSpeed *= -1;
                     }
                     else if (target.position.x > transform.position.x && !facingRight)
                     {
                         SlugFlip();
-                        movingSpeed *= -1;
+                        movementSpeed *= -1;
                     }
                 }
             }
@@ -121,7 +114,7 @@ public class Slug_AI : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(groundSensor.position, groundSensorRadius);
+        Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackSensorsPointer.position, attackSensorRadius);
@@ -135,26 +128,24 @@ public class Slug_AI : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                idle = true;
-                pasivePatrol = false;
+                standStill = true;
+                passivePatrol = false;
                 activePatrol = false;
-                angryStateBeforeHit = false; // There !!!!!!!!!!!!!!!!!!!!!!
                 break;
             case "Slug":
-                movingSpeed *= -1;
+                movementSpeed *= -1;
                 SlugFlip();
                 break;
             case "Bullet":
-                health--;
-                angryStateBeforeHit = true;
-                //movingSpeed = movingSpeedInAngryState;
-                StartCoroutine(AngryStateTimer());
-                hitFlashMateria.color = hitFlashColor;
-                spriteRenderer.material = hitFlashMateria;
+                maximumHealth--;
+                hitEffectMaterial.color = hitEffectColor;
+                standStill = false;
+                activePatrol = true;
+                spriteRenderer.material = hitEffectMaterial;
                 StartCoroutine(HitFlashRountime());
-                if(health <= 0)
+                if(maximumHealth <= 0)
                 {
-                    slugAnimator.SetBool("Dead", true);
+                    animator.SetBool("Dead", true);
                     slugIsDead = true;
                     rigidBody.bodyType = RigidbodyType2D.Static;
                     circleCollider.enabled = false;
@@ -165,12 +156,12 @@ public class Slug_AI : MonoBehaviour
                 if (target.position.x < transform.position.x && facingRight)
                 {
                     SlugFlip();
-                    movingSpeed *= -1;
+                    movementSpeed *= -1;
                 }
                 else if (target.position.x > transform.position.x && !facingRight)
                 {
                     SlugFlip();
-                    movingSpeed *= -1;
+                    movementSpeed *= -1;
                 }
                 break;
         }
@@ -178,14 +169,7 @@ public class Slug_AI : MonoBehaviour
 
     private IEnumerator HitFlashRountime()
     {
-        yield return new WaitForSeconds(hitFlashDuriation);
+        yield return new WaitForSeconds(hitEffectDuration);
         spriteRenderer.material = originalMaterial;
-    }
-
-    private IEnumerator AngryStateTimer()
-    {
-        yield return new WaitForSeconds(angryStateDuration);
-        angryStateBeforeHit = false;
-        //movingSpeed = originalSpeed;
     }
 }
