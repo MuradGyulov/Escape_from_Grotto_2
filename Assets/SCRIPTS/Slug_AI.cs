@@ -164,6 +164,23 @@ public class Slug_AI : MonoBehaviour
                     movementSpeed *= -1;
                 }
                 break;
+            case "Stalagmit":
+                maximumHealth--;
+                hitEffectMaterial.color = hitEffectColor;
+                standStill = false;
+                activePatrol = true;
+                spriteRenderer.material = hitEffectMaterial;
+                StartCoroutine(HitFlashRountime());
+                if (maximumHealth <= 0)
+                {
+                    animator.SetBool("Dead", true);
+                    slugIsDead = true;
+                    rigidBody.bodyType = RigidbodyType2D.Static;
+                    circleCollider.enabled = false;
+                    capsulCollider.enabled = false;
+                    Destroy(this.gameObject, 1);
+                }
+                break;
         }
     }
 

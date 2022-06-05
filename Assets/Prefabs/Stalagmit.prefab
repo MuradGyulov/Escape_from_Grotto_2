@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7018173056449169859}
   m_Layer: 0
   m_Name: Stalagm
-  m_TagString: Dangerous
+  m_TagString: Stalagmit
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5100,7 +5100,7 @@ GameObject:
   - component: {fileID: 7018173058550685960}
   m_Layer: 0
   m_Name: Stalagmit
-  m_TagString: Untagged
+  m_TagString: Stalagmit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

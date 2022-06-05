@@ -24,6 +24,23 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.SetActive(false);
+        switch (collision.gameObject.tag)
+        {
+            case "Ground":
+                gameObject.SetActive(false);
+                break;
+            case "Slug":
+                gameObject.SetActive(false);
+                break;
+            case "Box":
+                gameObject.SetActive(false);
+                break;
+            case "Stalagmit":
+                gameObject.SetActive(false);
+                break;
+            case "Gates":
+                gameObject.SetActive(false);
+                break;
+        }
     }
 }

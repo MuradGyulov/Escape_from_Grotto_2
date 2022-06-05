@@ -12,6 +12,9 @@ TagManager:
   - Stalagmit Sensor
   - Bullet
   - Slug
+  - Stalagmit
+  - Spike
+  - Ground
   layers:
   - Default
   - TransparentFX

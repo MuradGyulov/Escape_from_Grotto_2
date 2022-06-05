@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1459638488}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Dangerous
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -123474,7 +123474,7 @@ GameObject:
   - component: {fileID: 5319906944054531858}
   m_Layer: 11
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
