@@ -41,6 +41,11 @@ public class Cutscene_Manager : MonoBehaviour
                 videosLevel_1[2].gameObject.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
+            case 4:
+                levelNumberIndicator.gameObject.SetActive(false);
+                videosLevel_1[3].gameObject.SetActive(true);
+                skipButton.gameObject.SetActive(true);
+                break;
         }
     }
 
