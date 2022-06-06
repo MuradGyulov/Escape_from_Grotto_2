@@ -7,7 +7,10 @@ using UnityEngine.Timeline;
 
 public class Cutscene_Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] videosLevel_1 = new GameObject[0];
+    [SerializeField] private GameObject level_1_Video;
+    [SerializeField] private GameObject level_2_Video;
+    [SerializeField] private GameObject Level_4_Video;
+    [SerializeField] private GameObject Level_7_Video;
     [Space(30)]
     [SerializeField] private Button skipButton;
     [SerializeField] private Text levelNumberIndicator;
@@ -28,22 +31,22 @@ public class Cutscene_Manager : MonoBehaviour
         {
             case 1:
                 levelNumberIndicator.gameObject.SetActive(false);
-                videosLevel_1[0].gameObject.SetActive(true);
+                level_1_Video.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
             case 2:
                 levelNumberIndicator.gameObject.SetActive(false);
-                videosLevel_1[1].gameObject.SetActive(true);
-                skipButton.gameObject.SetActive(true);
-                break;
-            case 3:
-                levelNumberIndicator.gameObject.SetActive(false);
-                videosLevel_1[2].gameObject.SetActive(true);
+                level_2_Video.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
             case 4:
                 levelNumberIndicator.gameObject.SetActive(false);
-                videosLevel_1[3].gameObject.SetActive(true);
+                Level_4_Video.gameObject.SetActive(true);
+                skipButton.gameObject.SetActive(true);
+                break;
+            case 7:
+                levelNumberIndicator.gameObject.SetActive(false);
+                Level_7_Video.gameObject.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
         }
@@ -53,13 +56,10 @@ public class Cutscene_Manager : MonoBehaviour
     {
         levelNumberIndicator.gameObject.SetActive(true);
 
-        for(int i = 0; i < videosLevel_1.Length; i++)
-        {
-            if (videosLevel_1[i].gameObject.activeInHierarchy)
-            {
-                videosLevel_1[i].gameObject.SetActive(false);
-            }
-        }
+        level_1_Video.SetActive(false);
+        level_2_Video.SetActive(false);
+        Level_4_Video.SetActive(false);
+        Level_7_Video.SetActive(false);
 
         skipButton.gameObject.SetActive(false);
         vegnetteHole.SetActive(false);

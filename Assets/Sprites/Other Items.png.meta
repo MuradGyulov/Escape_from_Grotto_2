@@ -119,8 +119,8 @@ TextureImporter:
       name: Bullet
       rect:
         serializedVersion: 2
-        x: 188
-        y: 194
+        x: 1
+        y: 162
         width: 11
         height: 4
       alignment: 0
@@ -161,8 +161,8 @@ TextureImporter:
       name: Sleeve
       rect:
         serializedVersion: 2
-        x: 176
-        y: 199
+        x: 1
+        y: 160
         width: 3
         height: 1
       alignment: 0
@@ -221,22 +221,64 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exclamation Mark
+      name: Key
       rect:
         serializedVersion: 2
-        x: 197
-        y: 184
-        width: 2
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 33
+        y: 169
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1b210abbc7f89e4aa08a8ec25ca2a34
-      internalID: 2077319375
+      spriteID: ae4693c364753b645a364812513a349d
+      internalID: -1415051608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key Block
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba9ca046533d0843a7bcd94166b7dfc
+      internalID: 142409921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be992dbb285354b4b9c8a0453947dca0
+      internalID: -361428359
       vertices: []
       indices: 
       edges: []
@@ -255,9 +297,12 @@ TextureImporter:
       Stalagmite 1: 619116094
       Sleeve: 2026844738
       Bullet: -1329725105
+      Key Block: 142409921
       Stalagmite 2: 38347685
       Box: -1739997020
       Exclamation Mark: 2077319375
+      Key: -1415051608
+      Block: -361428359
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -136,6 +136,10 @@ public class Slug_AI : MonoBehaviour
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
+            case "Box":
+                movementSpeed *= -1;
+                SlugFlip();
+                break;
             case "Bullet":
                 maximumHealth--;
                 hitEffectMaterial.color = hitEffectColor;

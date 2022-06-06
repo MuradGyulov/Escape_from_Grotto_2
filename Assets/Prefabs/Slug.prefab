@@ -245,7 +245,7 @@ MonoBehaviour:
   maximumHealth: 5
   movementSpeed: 1
   hitEffectDuration: 0.16
-  hitEffectColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectColor: {r: 0.7725491, g: 0.97647065, b: 0.9215687, a: 1}
   groundSensorRadius: 0.04
   chaseSensorRadius: 3.47
   attackSensorRadius: 1.8
