@@ -111,7 +111,7 @@ public class Slug_AI : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
