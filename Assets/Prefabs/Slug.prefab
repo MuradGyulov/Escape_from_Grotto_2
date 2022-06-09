@@ -238,11 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02edbdec7916da743944a04bd6a9dfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standStill: 1
-  passivePatrol: 0
-  activePatrol: 0
+  standStill: 0
+  activePatrol: 1
   target: {fileID: 0}
-  maximumHealth: 5
+  maximumHealth: 4
   movementSpeed: 1
   hitEffectDuration: 0.16
   hitEffectColor: {r: 0.7725491, g: 0.97647065, b: 0.9215687, a: 1}
