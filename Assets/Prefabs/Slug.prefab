@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3898035720129194048}
   m_Layer: 0
-  m_Name: Attack Sensors
+  m_Name: Detection Sensor Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,8 +246,7 @@ MonoBehaviour:
   hitEffectDuration: 0.16
   hitEffectColor: {r: 0.7725491, g: 0.97647065, b: 0.9215687, a: 1}
   groundSensorRadius: 0.04
-  chaseSensorRadius: 3.47
-  attackSensorRadius: 1.8
+  detectionRadius: 1.8
   whatIsGround:
     serializedVersion: 2
     m_Bits: 6144
@@ -255,7 +254,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   groundSensorPointer: {fileID: 4566705713452467069}
-  attackSensorsPointer: {fileID: 3898035720129194048}
+  dtectionSensorPointer: {fileID: 3898035720129194048}
   hitEffectMaterial: {fileID: 2100000, guid: 5bcd6412038b1bf41a71c07636e22f7b, type: 2}
   capsulCollider: {fileID: 1038736132}
   circleCollider: {fileID: 340202951343602694}

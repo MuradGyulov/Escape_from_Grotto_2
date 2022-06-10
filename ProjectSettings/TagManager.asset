@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gates
-  - Dangerous
   - Ladders
-  - Dialog Point
-  - Video Trigger Level 1.  (2)
   - Stalagmit Sensor
   - Bullet
   - Slug
@@ -17,6 +14,10 @@ TagManager:
   - Ground
   - Box
   - Key Block
+  - Dragon
+  - Fireball
+  - Undefined
+  - Cannon Ammo
   layers:
   - Default
   - TransparentFX
