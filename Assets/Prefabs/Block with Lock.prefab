@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2659361366505767827}
   - component: {fileID: 2659361366505767828}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block (2)
   m_TagString: Key Block
   m_Icon: {fileID: 0}
@@ -5119,7 +5119,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5161,9 +5161,9 @@ GameObject:
   - component: {fileID: 2659361367103443788}
   - component: {fileID: 2659361367103443790}
   - component: {fileID: 2659361367103443789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Key Block
-  m_TagString: Key Block
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5274,7 +5274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2659361367314363330}
   - component: {fileID: 2659361367314363331}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block (1)
   m_TagString: Key Block
   m_Icon: {fileID: 0}
@@ -5358,7 +5358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2659361367461796462}
   - component: {fileID: 2659361367461796463}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block
   m_TagString: Key Block
   m_Icon: {fileID: 0}

@@ -12,9 +12,5 @@ public class Stalagmit_Sensor : MonoBehaviour
         {
             stalagmit.StalagmitActivate();
         }
-        else if(collision.gameObject.tag == "Slug")
-        {
-            stalagmit.StalagmitActivate();
-        }
     }
 }

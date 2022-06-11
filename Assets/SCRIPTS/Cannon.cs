@@ -24,6 +24,8 @@ public class Cannon : MonoBehaviour
             ammoInstance.SetActive(false);
             pooledCannonAmmo.Add(ammoInstance);
         }
+
+        StartCoroutine(CannonShooting());
     }
 
     private GameObject GetPooledAmmo()
@@ -38,12 +40,10 @@ public class Cannon : MonoBehaviour
         return null;
     }
 
-    private void FixedUpdate()
+    private IEnumerator CannonShooting()
     {
-        if(Time.time > nextShoot)
+        while (true)
         {
-            nextShoot = Time.time + fireRate;
-
             GameObject cannonAmmo = GetPooledAmmo();
             if (cannonAmmo != null)
             {
@@ -51,6 +51,7 @@ public class Cannon : MonoBehaviour
                 cannonAmmo.transform.rotation = transform.rotation;
                 cannonAmmo.SetActive(true);
             }
+            yield return new WaitForSeconds(fireRate);
         }
     }
 }

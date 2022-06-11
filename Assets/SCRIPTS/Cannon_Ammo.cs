@@ -13,13 +13,17 @@ public class Cannon_Ammo : MonoBehaviour
     [SerializeField] private ParticleSystem collisionEffect;
     [SerializeField] private ParticleSystem trailEffect;
 
+    private bool ammoIsExpoloded = false;
+
     private void OnEnable()
     {
-        rigidBody2D.AddForce(transform.right * ammoSpeed, ForceMode2D.Impulse);
+        ammoIsExpoloded = false;
         rigidBody2D.bodyType = RigidbodyType2D.Dynamic;
         spriteRenderer.enabled = true;
         boxCollider2D.enabled = true;
-        Invoke("EnableAmmo", ammoLifeTime);
+        StartCoroutine(EndAmmoLifetime());
+
+        rigidBody2D.AddForce(transform.right * ammoSpeed, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,42 +31,63 @@ public class Cannon_Ammo : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
+                ammoIsExpoloded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
                 trailEffect.Stop();
                 collisionEffect.Play();
-                Invoke("EnableAmmo", 1);
+                StartCoroutine(EnableAmmoBeforeCollision());
                 break;
             case "Ground":
+                ammoIsExpoloded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
                 trailEffect.Stop();
                 collisionEffect.Play();
-                Invoke("EnableAmmo", 1);
+                StartCoroutine(EnableAmmoBeforeCollision());
                 break;
             case "Box":
+                ammoIsExpoloded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
                 trailEffect.Stop();
                 collisionEffect.Play();
-                Invoke("EnableAmmo", 1);
+                StartCoroutine(EnableAmmoBeforeCollision());
                 break;
             case "Stalagmit":
+                ammoIsExpoloded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
                 trailEffect.Stop();
                 collisionEffect.Play();
-                Invoke("EnableAmmo", 1);
+                StartCoroutine(EnableAmmoBeforeCollision());
                 break;
         }
     }
 
-    private void EnableAmmo()
+    private IEnumerator EnableAmmoBeforeCollision()
     {
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);       
+    }
+
+    private IEnumerator EndAmmoLifetime()
+    {
+        yield return new WaitForSeconds(ammoLifeTime);
+        if (!ammoIsExpoloded)
+        {
+            ammoIsExpoloded = true;
+            rigidBody2D.bodyType = RigidbodyType2D.Static;
+            spriteRenderer.enabled = false;
+            boxCollider2D.enabled = false;
+            trailEffect.Stop();
+            collisionEffect.Play();
+        }
+        yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }
 }

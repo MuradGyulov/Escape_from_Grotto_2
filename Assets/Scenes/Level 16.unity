@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: fireRate
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
+      propertyPath: ammountCannonAmmoInPool
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8847020811009750220, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: m_Name
       value: Cannon (1)
@@ -479,6 +483,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Variant. Lv 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 7.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
 --- !u!1001 &8847020810063456222
@@ -532,6 +552,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
+      propertyPath: ammountCannonAmmoInPool
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8847020811009750218, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -539,6 +563,10 @@ PrefabInstance:
     - target: {fileID: 8847020811009750220, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847020811009750220, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
