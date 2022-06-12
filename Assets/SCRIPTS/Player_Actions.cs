@@ -146,6 +146,18 @@ public class Player_Actions : MonoBehaviour
                     isStop = true;
                 }
                 break;
+            case "Ghost":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
             case "Dragon":
                 if (!isStop)
                 {
@@ -306,12 +318,12 @@ public class Player_Actions : MonoBehaviour
             if (transform.localScale.x == 1) 
             {
                 bulletLauncher.eulerAngles = new Vector3(0, 0, 0);
-                sleeveLauncher.eulerAngles = new Vector3(0, 0, 0);
+                sleeveLauncher.eulerAngles = new Vector3(0, 0, 12);
             }
             else if (transform.localScale.x == -1) 
             {
                 bulletLauncher.eulerAngles = new Vector3(0, 180, 0);
-                sleeveLauncher.eulerAngles = new Vector3(0, 180, 0);
+                sleeveLauncher.eulerAngles = new Vector3(0, 180, 12);
             }
         }
     }

@@ -48,6 +48,15 @@ public class Cannon_Ammo : MonoBehaviour
                 collisionEffect.Play();
                 StartCoroutine(EnableAmmoBeforeCollision());
                 break;
+            case "Cannon Ammo":
+                ammoIsExpoloded = true;
+                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                spriteRenderer.enabled = false;
+                boxCollider2D.enabled = false;
+                trailEffect.Stop();
+                collisionEffect.Play();
+                StartCoroutine(EnableAmmoBeforeCollision());
+                break;
             case "Box":
                 ammoIsExpoloded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;

@@ -17,6 +17,7 @@ TagManager:
   - Dragon
   - Fireball
   - Cannon Ammo
+  - Cannon
   layers:
   - Default
   - TransparentFX
