@@ -18,6 +18,9 @@ TagManager:
   - Fireball
   - Cannon Ammo
   - Cannon
+  - Water
+  - Ghost
+  - Frog
   layers:
   - Default
   - TransparentFX

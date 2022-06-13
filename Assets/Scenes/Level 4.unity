@@ -1188,26 +1188,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1597076638947564515, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[35].m_Data
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1597076638947564515, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[47].m_Data
-      value: 
-      objectReference: {fileID: -2136409760, guid: 4e59fe2102b68c24f84eec77fa284cc9, type: 3}
-    - target: {fileID: 1597076638947564515, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[35].m_RefCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1597076638947564515, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[47].m_RefCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1597076638947564515, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
-      propertyPath: m_Tiles.Array.data[1288].second.m_TileSpriteIndex
-      value: 47
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6671b0eac769484cb3cb3f7bd3177b5, type: 3}
 --- !u!1001 &1374592017519610124

@@ -5,24 +5,63 @@ using UnityEngine;
 public class Ghost_AI : MonoBehaviour
 {
     [SerializeField] private float flySpeed;
+    [SerializeField] private float targetDetectionRadius;
+    [SerializeField] private float targetPursitRadius;
     [Space(15)]
     [SerializeField] private Transform target;
+    [Space(28)]
+    [SerializeField] private LayerMask whoIsPlayer;
+    [Space(10)]
+    [SerializeField] private Transform Pointer;
 
 
     private bool facingRight = true;
+    private bool targetCaptured;
+    private bool playerIsDeadOrWin = false;
+
+    private void Start()
+    {
+        Player_Actions.PlayerIsWin.AddListener(PlayerIsDeadOrWin);
+        Player_Actions.PlayerIsDead.AddListener(PlayerIsDeadOrWin);
+    }
+
+    private void PlayerIsDeadOrWin()
+    {
+        playerIsDeadOrWin = true;
+    }
 
 
     private void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, flySpeed);
+        if (!playerIsDeadOrWin)
+        {
+            if (!targetCaptured)
+            {
+                targetCaptured = Physics2D.OverlapCircle(Pointer.position, targetDetectionRadius, whoIsPlayer);
+            }
+            else if (targetCaptured = Physics2D.OverlapCircle(Pointer.position, targetPursitRadius, whoIsPlayer))
+            {
+                targetCaptured = true;
+            }
+            else
+            {
+                targetCaptured = false;
+            }
 
-        if (target.position.x < transform.position.x && facingRight)
-        {
-            SlugFlip();
-        }
-        else if (target.position.x > transform.position.x && !facingRight)
-        {
-            SlugFlip();
+
+            if (targetCaptured)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.position, flySpeed);
+
+                if (target.position.x < transform.position.x && facingRight)
+                {
+                    SlugFlip();
+                }
+                else if (target.position.x > transform.position.x && !facingRight)
+                {
+                    SlugFlip();
+                }
+            }
         }
     }
 
@@ -33,5 +72,13 @@ public class Ghost_AI : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(Pointer.position, targetDetectionRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(Pointer.position, targetPursitRadius);
     }
 }

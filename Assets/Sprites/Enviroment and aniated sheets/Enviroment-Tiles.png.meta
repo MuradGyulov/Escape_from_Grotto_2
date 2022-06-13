@@ -9455,8 +9455,8 @@ TextureImporter:
       name: Enviroment-Tiles_449
       rect:
         serializedVersion: 2
-        x: 432
-        y: 0
+        x: 112
+        y: 224
         width: 16
         height: 16
       alignment: 0

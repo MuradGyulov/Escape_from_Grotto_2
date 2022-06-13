@@ -49,6 +49,12 @@ public class Player_Bullet : MonoBehaviour
                 spriteRenderer.enabled = false;
                 slugHitParticles.Play();
                 break;
+            case "Frog":
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                boxCollider.enabled = false;
+                spriteRenderer.enabled = false;
+                slugHitParticles.Play();
+                break;
             case "Dragon":
                 rigidbod.bodyType = RigidbodyType2D.Static;
                 boxCollider.enabled = false;
