@@ -9891,7 +9891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 14
-  bulletLifeTime: 0.8
+  bulletLifeTime: 1
   grounHitParticles: {fileID: 1102523237343178550}
   slugHitParticles: {fileID: 5558213485393694610}
   boxHitParticles: {fileID: 8844027348225561298}

@@ -161,7 +161,7 @@ public class Frog_AI : MonoBehaviour
                     rigidBody.bodyType = RigidbodyType2D.Static;
                     circleCollider.enabled = false;
                     capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 1);
+                    Destroy(this.gameObject, 2f);
                 }
                 break;
         }

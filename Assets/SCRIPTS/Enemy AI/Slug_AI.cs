@@ -107,6 +107,10 @@ public class Slug_AI : MonoBehaviour
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
+            case "Frog":
+                movementSpeed *= -1;
+                SlugFlip();
+                break;
             case "Dragon":
                 movementSpeed *= -1;
                 SlugFlip();
@@ -129,7 +133,7 @@ public class Slug_AI : MonoBehaviour
                     rigidBody.bodyType = RigidbodyType2D.Static;
                     circleCollider.enabled = false;
                     capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 1);
+                    Destroy(this.gameObject, 2f);
                 }
 
                 if (target.position.x < transform.position.x && facingRight)

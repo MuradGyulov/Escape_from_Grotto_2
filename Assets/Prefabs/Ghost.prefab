@@ -143,7 +143,7 @@ MonoBehaviour:
   whoIsPlayer:
     serializedVersion: 2
     m_Bits: 1024
-  Pointer: {fileID: 9088320594440952288}
+  targetDetectionSensorPointer: {fileID: 9088320594440952288}
 --- !u!1 &8877952921521685906
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9088320594440952288}
   m_Layer: 0
-  m_Name: Pointer
+  m_Name: Detector Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

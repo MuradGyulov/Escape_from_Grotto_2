@@ -12,7 +12,7 @@ public class Ghost_AI : MonoBehaviour
     [Space(28)]
     [SerializeField] private LayerMask whoIsPlayer;
     [Space(10)]
-    [SerializeField] private Transform Pointer;
+    [SerializeField] private Transform targetDetectionSensorPointer;
 
 
     private bool facingRight = true;
@@ -37,9 +37,9 @@ public class Ghost_AI : MonoBehaviour
         {
             if (!targetCaptured)
             {
-                targetCaptured = Physics2D.OverlapCircle(Pointer.position, targetDetectionRadius, whoIsPlayer);
+                targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetDetectionRadius, whoIsPlayer);
             }
-            else if (targetCaptured = Physics2D.OverlapCircle(Pointer.position, targetPursitRadius, whoIsPlayer))
+            else if (targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetPursitRadius, whoIsPlayer))
             {
                 targetCaptured = true;
             }
@@ -77,8 +77,8 @@ public class Ghost_AI : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(Pointer.position, targetDetectionRadius);
+        Gizmos.DrawWireSphere(targetDetectionSensorPointer.position, targetDetectionRadius);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(Pointer.position, targetPursitRadius);
+        Gizmos.DrawWireSphere(targetDetectionSensorPointer.position, targetPursitRadius);
     }
 }
