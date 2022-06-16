@@ -21,6 +21,9 @@ TagManager:
   - Water
   - Ghost
   - Frog
+  - Enemy
+  - Player Bullet
+  - Dangerious
   layers:
   - Default
   - TransparentFX

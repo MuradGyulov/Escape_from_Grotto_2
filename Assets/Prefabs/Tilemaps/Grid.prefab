@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1547695340}
   m_Layer: 0
   m_Name: Lava Colliders
-  m_TagString: Spike
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1547695339
 Transform:
@@ -128,7 +128,7 @@ GameObject:
   m_TagString: Ladders
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7678188704119534706
 Transform:
@@ -261,11 +261,11 @@ GameObject:
   - component: {fileID: 4413727762723196049}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
 --- !u!4 &4515543974778877239
 Transform:
   m_ObjectHideFlags: 0
@@ -382,10 +382,10 @@ GameObject:
   - component: {fileID: 1935409271531705723}
   m_Layer: 0
   m_Name: Lava
-  m_TagString: Untagged
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8493350394974009888
 Transform:
@@ -547,10 +547,10 @@ GameObject:
   - component: {fileID: 3844620821909527180}
   m_Layer: 0
   m_Name: Water colliders
-  m_TagString: Water
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5111311760467046643
 Transform:
@@ -2264,7 +2264,7 @@ GameObject:
   - component: {fileID: 5314034720241331542}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Spike
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2655,7 +2655,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2262212386031163605
 Transform:
@@ -2801,8 +2801,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
 --- !u!4 &4861063233485073656
 Transform:
   m_ObjectHideFlags: 0
@@ -2921,7 +2921,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1970252706974334375
 Transform:

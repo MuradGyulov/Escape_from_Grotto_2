@@ -110,7 +110,7 @@ public class Player_Actions : MonoBehaviour
                     PlayerIsWin.Invoke();                   
                 }
                 break;
-            case "Stalagmit":
+            case "Dangerious":
                 if (!isStop) 
                 {
                     rigid2D.velocity = Vector2.zero;
@@ -122,103 +122,6 @@ public class Player_Actions : MonoBehaviour
                     isStop = true;
                 }               
                 break;
-            case "Spike":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Water":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Slug":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Frog":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Ghost":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Dragon":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Cannon Ammo":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-            case "Fireball":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }
-                break;
-
             case "Ladders":
                 onLadders = true;
                 break;          

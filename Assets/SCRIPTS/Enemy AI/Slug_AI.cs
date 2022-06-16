@@ -11,17 +11,19 @@ public class Slug_AI : MonoBehaviour
     [Space(10)]
     [SerializeField] private int maximumHealth;
     [SerializeField] private float movementSpeed;
-    [SerializeField] private float hitEffectDuration;
+    [Space(10)]
     [SerializeField] private Color hitEffectColor;
+    [SerializeField] private float hitEffectDuration;
+    [Space(10)]
     [SerializeField] private float groundSensorRadius;
     [SerializeField] private float detectionRadius;
     [Space(10)]
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whoIsPlayer;
-    [Space(25)]
+    [Space(60)]
     [SerializeField] Transform groundSensorPointer;
     [SerializeField] Transform dtectionSensorPointer;
-    [Space(8)]
+    [Space(10)]
     [SerializeField] private Material hitEffectMaterial;
     [SerializeField] private CapsuleCollider2D capsulCollider;
     [SerializeField] private CircleCollider2D circleCollider;
@@ -103,23 +105,16 @@ public class Slug_AI : MonoBehaviour
                 standStill = true;
                 activePatrol = false;
                 break;
-            case "Slug":
-                movementSpeed *= -1;
-                SlugFlip();
-                break;
-            case "Frog":
-                movementSpeed *= -1;
-                SlugFlip();
-                break;
-            case "Dragon":
-                movementSpeed *= -1;
-                SlugFlip();
-                break;
             case "Box":
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
-            case "Bullet":
+            case "Dangerious":
+                movementSpeed *= -1;
+                SlugFlip();
+                break;
+
+            case "Player Bullet":
                 maximumHealth--;
                 hitEffectMaterial.color = hitEffectColor;
                 standStill = false;
@@ -145,23 +140,6 @@ public class Slug_AI : MonoBehaviour
                 {
                     SlugFlip();
                     movementSpeed *= -1;
-                }
-                break;
-            case "Stalagmit":
-                maximumHealth--;
-                hitEffectMaterial.color = hitEffectColor;
-                standStill = false;
-                activePatrol = true;
-                spriteRenderer.material = hitEffectMaterial;
-                StartCoroutine(HitFlashRountime());
-                if (maximumHealth <= 0)
-                {
-                    animator.SetBool("Slug Dead", true);
-                    slugIsDead = true;
-                    rigidBody.bodyType = RigidbodyType2D.Static;
-                    circleCollider.enabled = false;
-                    capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 1);
                 }
                 break;
         }

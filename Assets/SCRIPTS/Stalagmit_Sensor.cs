@@ -10,7 +10,7 @@ public class Stalagmit_Sensor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            stalagmit.StalagmitActivate();
+            stalagmit.ActivateStalagmit();
         }
     }
 }

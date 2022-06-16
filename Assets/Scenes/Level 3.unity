@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &283285361
@@ -201,11 +205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7569344469210695853, guid: 189a36be336d1974d8d4322a6d4efb6a, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7569344469210695853, guid: 189a36be336d1974d8d4322a6d4efb6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.143179
+      value: 7.95
       objectReference: {fileID: 0}
     - target: {fileID: 7569344469210695853, guid: 189a36be336d1974d8d4322a6d4efb6a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -262,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -308,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &684256278
@@ -317,6 +325,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7018173056449169858, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_TagString
+      value: Dangerious
+      objectReference: {fileID: 0}
     - target: {fileID: 7018173056897768234, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_Size.y
       value: 2.8293755
@@ -327,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -373,6 +385,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_TagString
+      value: Dangerious
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &742588293
@@ -392,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,6 +458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &756574189
@@ -457,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,6 +527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &796629875
@@ -522,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -568,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &925845073
@@ -587,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,6 +665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &941664213
@@ -652,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,6 +734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &965784404
@@ -717,7 +757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -763,6 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!4 &986071859 stripped
@@ -799,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -845,6 +889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1384263935
@@ -868,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -914,6 +962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1399828704
@@ -933,7 +985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -979,6 +1031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!95 &1425568967 stripped
@@ -1003,7 +1059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1049,6 +1105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1504258174
@@ -1068,7 +1128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1114,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1526326294
@@ -1133,7 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,6 +1243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1582973342
@@ -1198,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1244,6 +1312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &1644061091
@@ -1259,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7569344469210695853, guid: 189a36be336d1974d8d4322a6d4efb6a, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7569344469210695853, guid: 189a36be336d1974d8d4322a6d4efb6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1320,7 +1392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1366,6 +1438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!95 &1736001693 stripped
@@ -1380,10 +1456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2843136309741283440, guid: e7b9b200fba148743992f5d864164238, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 7.0000005
-      objectReference: {fileID: 0}
     - target: {fileID: 3142595311676749701, guid: e7b9b200fba148743992f5d864164238, type: 3}
       propertyPath: m_Name
       value: Grid Variant. Lv 3
@@ -1653,7 +1725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7018173058550685960, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1699,6 +1771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmit (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018173058550685967, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd80e5f0d61d2648adebff3fd9d0642, type: 3}
 --- !u!1001 &8311731029368389953
@@ -1708,6 +1784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 986071861, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8311731028676706926, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1718,7 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311731028676706930, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8311731028676706930, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
       propertyPath: m_LocalPosition.y

@@ -5,32 +5,36 @@ using UnityEngine;
 public class Stalagmit : MonoBehaviour
 {
     [SerializeField] private float delayBerforFall;
-    [SerializeField] private SpriteRenderer SR;
-    [SerializeField] private PolygonCollider2D PC;
-    [SerializeField] private Rigidbody2D RB;
-    [SerializeField] private Animator AN;
-    [SerializeField] private ParticleSystem PS;
-    [SerializeField] private Stalagmit_Sensor SS;
+    [Space(25)]
+    [SerializeField] private SpriteRenderer spriteRendere;
+    [SerializeField] private PolygonCollider2D poligonCollider2D;
+    [SerializeField] private Rigidbody2D rigidBody2D;
+    [SerializeField] private Animator animator;
+    [SerializeField] private ParticleSystem stalagmitDestructionParticles;
+    [SerializeField] private Stalagmit_Sensor stalagmitSensor;
     [SerializeField] private GameObject thisStalagmit;
 
-    public void StalagmitActivate()
+    public void ActivateStalagmit()
     {
-        SS.gameObject.SetActive(false);
-        AN.enabled = true;
+        stalagmitSensor.gameObject.SetActive(false);
+        animator.enabled = true;
         Invoke("StalgmitFall", delayBerforFall);
     }
 
     private void StalgmitFall()
     {
-        RB.bodyType = RigidbodyType2D.Dynamic;
+        rigidBody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SR.enabled = false;
-        PC.enabled = false;
-        RB.bodyType = RigidbodyType2D.Static;
-        PS.Play();
-        Destroy(thisStalagmit, 1);
+        if(collision.gameObject.tag != "Dangerious")
+        {
+            spriteRendere.enabled = false;
+            poligonCollider2D.enabled = false;
+            rigidBody2D.bodyType = RigidbodyType2D.Static;
+            stalagmitDestructionParticles.Play();
+            Destroy(thisStalagmit, 1);
+        }
     }
 }
