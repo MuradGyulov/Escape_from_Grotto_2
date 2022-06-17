@@ -667,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Size.x
-      value: 6.001378
+      value: 4.9535236
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Size.y
@@ -675,11 +675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Offset.x
-      value: 0.5069537
+      value: -0.016973495
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Offset.y
-      value: 0.015678793
+      value: 0.015678763
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367314363329, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Layer
@@ -1905,19 +1905,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Size.x
-      value: 6.001378
+      value: 1.0201206
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Size.y
-      value: 1.0046558
+      value: 2.0111961
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Offset.x
-      value: 0.5069537
+      value: -0.0057058334
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367103443789, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Offset.y
-      value: 0.015678793
+      value: -0.4875914
       objectReference: {fileID: 0}
     - target: {fileID: 2659361367314363329, guid: 522054f3c595d0147aadb0b2503b2bf4, type: 3}
       propertyPath: m_Layer

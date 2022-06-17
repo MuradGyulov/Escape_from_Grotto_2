@@ -28,13 +28,36 @@ public class Stalagmit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Dangerious")
+        switch (collision.gameObject.tag)
         {
-            spriteRendere.enabled = false;
-            poligonCollider2D.enabled = false;
-            rigidBody2D.bodyType = RigidbodyType2D.Static;
-            stalagmitDestructionParticles.Play();
-            Destroy(thisStalagmit, 1);
+            case "Ground":
+                spriteRendere.enabled = false;
+                poligonCollider2D.enabled = false;
+                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                stalagmitDestructionParticles.Play();
+                Destroy(thisStalagmit, 1);
+                break;
+            case "Box":
+                spriteRendere.enabled = false;
+                poligonCollider2D.enabled = false;
+                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                stalagmitDestructionParticles.Play();
+                Destroy(thisStalagmit, 1);
+                break;
+            case "Player Bullet":
+                spriteRendere.enabled = false;
+                poligonCollider2D.enabled = false;
+                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                stalagmitDestructionParticles.Play();
+                Destroy(thisStalagmit, 1);
+                break;
+            case "Player":
+                spriteRendere.enabled = false;
+                poligonCollider2D.enabled = false;
+                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                stalagmitDestructionParticles.Play();
+                Destroy(thisStalagmit, 1);
+                break;
         }
     }
 }

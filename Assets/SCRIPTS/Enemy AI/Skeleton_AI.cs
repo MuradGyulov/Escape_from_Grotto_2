@@ -61,7 +61,7 @@ public class Skeleton_AI : MonoBehaviour
 
                 if (!sensorInGround && !targetDetected)
                 {
-                    SlugFlip();
+                    SkeletonFlip();
                     movementSpeed *= -1;
                 }
                 else if (!sensorInGround && targetDetected)
@@ -73,12 +73,12 @@ public class Skeleton_AI : MonoBehaviour
                 {
                     if (target.position.x < transform.position.x && facingRight)
                     {
-                        SlugFlip();
+                        SkeletonFlip();
                         movementSpeed *= -1;
                     }
                     else if (target.position.x > transform.position.x && !facingRight)
                     {
-                        SlugFlip();
+                        SkeletonFlip();
                         movementSpeed *= -1;
                     }
                 }
@@ -86,14 +86,6 @@ public class Skeleton_AI : MonoBehaviour
         }
     }
 
-    private void SlugFlip()
-    {
-        facingRight = !facingRight;
-
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -105,21 +97,27 @@ public class Skeleton_AI : MonoBehaviour
                 break;
             case "Slug":
                 movementSpeed *= -1;
-                SlugFlip();
+                SkeletonFlip();
                 break;
             case "Frog":
                 movementSpeed *= -1;
-                SlugFlip();
+                SkeletonFlip();
                 break;
             case "Dragon":
                 movementSpeed *= -1;
-                SlugFlip();
+                SkeletonFlip();
+                break;
+            case "Skeleton":
+                movementSpeed *= -1;
+                SkeletonFlip();
                 break;
             case "Box":
                 movementSpeed *= -1;
-                SlugFlip();
+                SkeletonFlip();
                 break;
-            case "Bullet":
+
+
+            case "Player Bullet":
                 maximumHealth--;
                 hitEffectMaterial.color = hitEffectColor;
                 standStill = false;
@@ -138,33 +136,25 @@ public class Skeleton_AI : MonoBehaviour
 
                 if (target.position.x < transform.position.x && facingRight)
                 {
-                    SlugFlip();
+                    SkeletonFlip();
                     movementSpeed *= -1;
                 }
                 else if (target.position.x > transform.position.x && !facingRight)
                 {
-                    SlugFlip();
+                    SkeletonFlip();
                     movementSpeed *= -1;
                 }
                 break;
-            case "Stalagmit":
-                maximumHealth--;
-                hitEffectMaterial.color = hitEffectColor;
-                standStill = false;
-                activePatrol = true;
-                spriteRenderer.material = hitEffectMaterial;
-                StartCoroutine(HitFlashRountime());
-                if (maximumHealth <= 0)
-                {
-                    animator.SetBool("Slug Dead", true);
-                    slugIsDead = true;
-                    rigidBody.bodyType = RigidbodyType2D.Static;
-                    circleCollider.enabled = false;
-                    capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 1);
-                }
-                break;
         }
+    }
+
+    private void SkeletonFlip()
+    {
+        facingRight = !facingRight;
+
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     private IEnumerator HitFlashRountime()

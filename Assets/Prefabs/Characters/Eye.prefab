@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6309975180051618282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.06, y: -0.077, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6309975180240732483}
   m_Layer: 0
   m_Name: Eye
-  m_TagString: Untagged
+  m_TagString: Eye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,9 +134,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.1}
+  m_Offset: {x: 0.030000001, y: -0.07745424}
   serializedVersion: 2
-  m_Radius: 0.22
+  m_Radius: 0.24254575
 --- !u!50 &6309975180240732481
 Rigidbody2D:
   serializedVersion: 4
@@ -192,15 +192,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flySpeed: 0.035
   maxHealth: 2
-  targetDetectionRadius: 1.35
+  targetDetectionRadius: 2
   targetPursitRadius: 5.59
+  hitEffectDuriation: 0.16
+  hitEffectColor: {r: 0.7725491, g: 0.97647065, b: 0.9215687, a: 1}
   target: {fileID: 0}
   whoIsPlayer:
     serializedVersion: 2
     m_Bits: 1024
+  hitEffectMaterial: {fileID: 2100000, guid: 5bcd6412038b1bf41a71c07636e22f7b, type: 2}
   targetDetectionSensorPointer: {fileID: 6309975180051618283}
   animator: {fileID: 6309975180240732480}
   rigidBody2D: {fileID: 6309975180240732481}
+  spriteRenderer: {fileID: 6309975180240732487}
   circleCollider: {fileID: 6309975180240732486}
 --- !u!1 &6309975181464019535
 GameObject:
@@ -226,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6309975181464019535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.059999943, y: -0.07700002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

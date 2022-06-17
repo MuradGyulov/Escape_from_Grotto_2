@@ -1221,7 +1221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406035496333392333, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[6].second.m_AnimationSpeed
-      value: 3.0000002
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1406035496333392333, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[7].second.m_AnimationSpeed
@@ -1269,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406035496333392333, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[18].second.m_AnimationSpeed
-      value: 3
+      value: 3.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 1406035496333392333, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[19].second.m_AnimationSpeed
@@ -2249,7 +2249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314034719114549352, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_Size.x
-      value: 0.7531128
+      value: 0.7824364
       objectReference: {fileID: 0}
     - target: {fileID: 5314034719114549352, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_Size.y
@@ -2257,7 +2257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314034719114549352, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_Offset.x
-      value: 32.585114
+      value: 32.599777
       objectReference: {fileID: 0}
     - target: {fileID: 5314034719114549352, guid: d1daa04578a6ca6438195d358368d754, type: 3}
       propertyPath: m_Offset.y

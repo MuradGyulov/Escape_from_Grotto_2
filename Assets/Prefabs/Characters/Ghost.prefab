@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7903028838302418450}
   - component: {fileID: 7903028838302418449}
   - component: {fileID: 7903028838302418448}
-  - component: {fileID: 8086549188011207395}
+  - component: {fileID: 5969553455945064747}
   - component: {fileID: 7903028838302418455}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Ghost
+  m_TagString: Dangerious
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1622302351, guid: a29caf745db36f046bbaaf9ba8195fe5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,7 +104,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06746435, y: 0.5565102}
   m_Size: {x: 0.4902935, y: 0.66699934}
   m_Direction: 0
---- !u!95 &8086549188011207395
+--- !u!95 &5969553455945064747
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ Animator:
   m_GameObject: {fileID: 7903028838302418454}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a8a2ac55052af6249ad2d106b658b49f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad93c761375acd547a010dd0e3530bfd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -136,11 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb5e1f9825cf0b448b8cd8c64d087f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 0.035
-  targetDetectionRadius: 1.8
-  targetPursitRadius: 8
   target: {fileID: 0}
-  whoIsPlayer:
+  flySpeed: 0.04
+  targetDetectionRadius: 2
+  targetPursitRadius: 10
+  whoIsTarget:
     serializedVersion: 2
     m_Bits: 1024
   targetDetectionSensorPointer: {fileID: 9088320594440952288}

@@ -483,22 +483,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid Variant. Lv 16
       objectReference: {fileID: 0}
-    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 7.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
 --- !u!1001 &8847020810063456222

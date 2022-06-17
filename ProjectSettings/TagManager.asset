@@ -6,24 +6,20 @@ TagManager:
   tags:
   - Gates
   - Ladders
-  - Stalagmit Sensor
-  - Bullet
   - Slug
   - Stalagmit
-  - Spike
   - Ground
   - Box
-  - Key Block
   - Dragon
-  - Fireball
-  - Cannon Ammo
   - Cannon
-  - Water
   - Ghost
   - Frog
-  - Enemy
   - Player Bullet
   - Dangerious
+  - Key Block
+  - Eye
+  - Skeleton
+  - Dragon Fireball
   layers:
   - Default
   - TransparentFX

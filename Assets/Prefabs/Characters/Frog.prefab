@@ -241,12 +241,12 @@ MonoBehaviour:
   standStill: 1
   activePatrol: 0
   target: {fileID: 0}
-  maximumHealth: 9
-  movementSpeed: 1.2
+  maximumHealth: 10
+  movementSpeed: 1.5
   hitEffectDuration: 0.16
   hitEffectColor: {r: 0.73333335, g: 0.9686275, b: 0.49803925, a: 1}
   groundSensorRadius: 0.04
-  detectionRadius: 2.8
+  detectionRadius: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 6144

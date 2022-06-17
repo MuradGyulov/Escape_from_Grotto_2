@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Ghost_AI : MonoBehaviour
 {
+    [SerializeField] private Transform target;
+    [Space(15)]
     [SerializeField] private float flySpeed;
     [SerializeField] private float targetDetectionRadius;
     [SerializeField] private float targetPursitRadius;
-    [Space(15)]
-    [SerializeField] private Transform target;
     [Space(28)]
-    [SerializeField] private LayerMask whoIsPlayer;
+    [SerializeField] private LayerMask whoIsTarget;
     [Space(10)]
     [SerializeField] private Transform targetDetectionSensorPointer;
 
@@ -37,9 +37,9 @@ public class Ghost_AI : MonoBehaviour
         {
             if (!targetCaptured)
             {
-                targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetDetectionRadius, whoIsPlayer);
+                targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetDetectionRadius, whoIsTarget);
             }
-            else if (targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetPursitRadius, whoIsPlayer))
+            else if (targetCaptured = Physics2D.OverlapCircle(targetDetectionSensorPointer.position, targetPursitRadius, whoIsTarget))
             {
                 targetCaptured = true;
             }

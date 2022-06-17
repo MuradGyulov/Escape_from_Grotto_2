@@ -119,7 +119,8 @@ public class Frog_AI : MonoBehaviour
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
-            case "Bullet":
+
+            case "Player Bullet":
                 maximumHealth--;
                 hitEffectMaterial.color = hitEffectColor;
                 standStill = false;
@@ -145,23 +146,6 @@ public class Frog_AI : MonoBehaviour
                 {
                     SlugFlip();
                     movementSpeed *= -1;
-                }
-                break;
-            case "Stalagmit":
-                maximumHealth--;
-                hitEffectMaterial.color = hitEffectColor;
-                standStill = false;
-                activePatrol = true;
-                spriteRenderer.material = hitEffectMaterial;
-                StartCoroutine(HitFlashRountime());
-                if (maximumHealth <= 0)
-                {
-                    animator.SetBool("Frog Dead", true);
-                    slugIsDead = true;
-                    rigidBody.bodyType = RigidbodyType2D.Static;
-                    circleCollider.enabled = false;
-                    capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 2f);
                 }
                 break;
         }

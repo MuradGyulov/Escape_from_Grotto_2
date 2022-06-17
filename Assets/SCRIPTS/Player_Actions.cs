@@ -96,44 +96,7 @@ public class Player_Actions : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch (collision.gameObject.tag)
-        {
-            case "Gates":
-                if (!isStop)
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    isStop = true;
-                    if (!audios.isPlaying) { audios.PlayOneShot(winSound); }
-                    animator.SetBool("Win", true);
-                    PlayerIsWin.Invoke();                   
-                }
-                break;
-            case "Dangerious":
-                if (!isStop) 
-                {
-                    rigid2D.velocity = Vector2.zero;
-                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
-                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                    animator.SetBool("Dead", true);
-                    PlayerIsDead.Invoke();
-                    capsulCollid2D.sharedMaterial = null;
-                    isStop = true;
-                }               
-                break;
-            case "Ladders":
-                onLadders = true;
-                break;          
-        }
-    }
-
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        onLadders = false;
-    }
-
+    
     private void PlayerRun()
     {
         if (!isStop)
@@ -260,5 +223,115 @@ public class Player_Actions : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(touchDownSensor.position, touchDownSensorRadius);
         Gizmos.DrawWireSphere(touchBoxSensor.position, boxTouchSensorRadius);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Ladders":
+                onLadders = true;
+                break;
+            case "Gates":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    isStop = true;
+                    if (!audios.isPlaying) { audios.PlayOneShot(winSound); }
+                    animator.SetBool("Win", true);
+                    PlayerIsWin.Invoke();
+                }
+                break;
+            case "Dangerious":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Dragon Fireball":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Slug":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Frog":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Skeleton":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Dragon":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+            case "Eye":
+                if (!isStop)
+                {
+                    rigid2D.velocity = Vector2.zero;
+                    if (!audios.isPlaying) { audios.PlayOneShot(hitSound); }
+                    rigid2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                    animator.SetBool("Dead", true);
+                    PlayerIsDead.Invoke();
+                    capsulCollid2D.sharedMaterial = null;
+                    isStop = true;
+                }
+                break;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        onLadders = false;
     }
 }

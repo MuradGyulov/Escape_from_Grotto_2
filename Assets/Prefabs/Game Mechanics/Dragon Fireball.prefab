@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1839662669572265388}
   m_Layer: 0
   m_Name: Dragon Fireball
-  m_TagString: Fireball
+  m_TagString: Dragon Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5007,7 +5007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBallSpeed: 1.8
-  fireBallLifeTime: 4
+  fireBallLifeTime: 2.8
   rigidBody2D: {fileID: 6568303780402864502}
   spriteRenderer: {fileID: 6731753408866692605}
   boxCollider2D: {fileID: -7621027513594592129}

@@ -13,16 +13,15 @@ public class Cannon_Ammo : MonoBehaviour
     [SerializeField] private ParticleSystem collisionEffect;
     [SerializeField] private ParticleSystem trailEffect;
 
-    private bool ammoIsExpoloded = false;
+    private bool ammoIsExploded = false;
 
     private void OnEnable()
     {
-        ammoIsExpoloded = false;
-        rigidBody2D.bodyType = RigidbodyType2D.Dynamic;
-        spriteRenderer.enabled = true;
+        ammoIsExploded = false;
         boxCollider2D.enabled = true;
+        spriteRenderer.enabled = true;
         StartCoroutine(EndAmmoLifetime());
-
+        rigidBody2D.bodyType = RigidbodyType2D.Dynamic;
         rigidBody2D.AddForce(transform.right * ammoSpeed, ForceMode2D.Impulse);
     }
 
@@ -31,7 +30,7 @@ public class Cannon_Ammo : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                ammoIsExpoloded = true;
+                ammoIsExploded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
@@ -40,7 +39,7 @@ public class Cannon_Ammo : MonoBehaviour
                 StartCoroutine(EnableAmmoBeforeCollision());
                 break;
             case "Ground":
-                ammoIsExpoloded = true;
+                ammoIsExploded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
@@ -48,8 +47,8 @@ public class Cannon_Ammo : MonoBehaviour
                 collisionEffect.Play();
                 StartCoroutine(EnableAmmoBeforeCollision());
                 break;
-            case "Cannon Ammo":
-                ammoIsExpoloded = true;
+            case "Dangerious":
+                ammoIsExploded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
@@ -58,16 +57,7 @@ public class Cannon_Ammo : MonoBehaviour
                 StartCoroutine(EnableAmmoBeforeCollision());
                 break;
             case "Box":
-                ammoIsExpoloded = true;
-                rigidBody2D.bodyType = RigidbodyType2D.Static;
-                spriteRenderer.enabled = false;
-                boxCollider2D.enabled = false;
-                trailEffect.Stop();
-                collisionEffect.Play();
-                StartCoroutine(EnableAmmoBeforeCollision());
-                break;
-            case "Stalagmit":
-                ammoIsExpoloded = true;
+                ammoIsExploded = true;
                 rigidBody2D.bodyType = RigidbodyType2D.Static;
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
@@ -87,9 +77,9 @@ public class Cannon_Ammo : MonoBehaviour
     private IEnumerator EndAmmoLifetime()
     {
         yield return new WaitForSeconds(ammoLifeTime);
-        if (!ammoIsExpoloded)
+        if (!ammoIsExploded)
         {
-            ammoIsExpoloded = true;
+            ammoIsExploded = true;
             rigidBody2D.bodyType = RigidbodyType2D.Static;
             spriteRenderer.enabled = false;
             boxCollider2D.enabled = false;

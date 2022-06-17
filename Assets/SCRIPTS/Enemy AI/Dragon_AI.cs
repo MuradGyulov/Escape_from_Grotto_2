@@ -13,11 +13,13 @@ public class Dragon_AI : MonoBehaviour
     [SerializeField] private int maximumHealth;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float fireRate;
-    [SerializeField] private float hitEffectDuration;
-    [SerializeField] private Color hitEffectColor;
     [SerializeField] private Vector2 attacRadiusSizes;
     [SerializeField] private float groundSensorRadius;
     [SerializeField] private float detectionSensorRadius;
+    [Space(10)]
+    [SerializeField] private float hitEffectDuration;
+    [SerializeField] private Color hitEffectColor;
+
     [Space(10)]
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whoIsPlayer;
@@ -200,6 +202,24 @@ public class Dragon_AI : MonoBehaviour
         }
     }
 
+    private IEnumerator HitFlashRountime()
+    {
+        yield return new WaitForSeconds(hitEffectDuration);
+        spriteRenderer.material = originalMaterial;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(detectionSensorPointer.position, detectionSensorRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(attackRadiusPointer.position, attacRadiusSizes);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
@@ -207,6 +227,13 @@ public class Dragon_AI : MonoBehaviour
             case "Player":
                 standStill = true;
                 activePatrol = false;
+                defence = false;
+                animator.SetBool("Dragon Attack", false);
+                animator.SetFloat("Dragon Move", 0);
+                break;
+            case "Box":
+                movementSpeed *= -1;
+                DragonFlip();
                 break;
             case "Slug":
                 movementSpeed *= -1;
@@ -216,11 +243,17 @@ public class Dragon_AI : MonoBehaviour
                 movementSpeed *= -1;
                 DragonFlip();
                 break;
-            case "Box":
+            case "Skeleton":
                 movementSpeed *= -1;
                 DragonFlip();
                 break;
-            case "Bullet":
+            case "Frog":
+                movementSpeed *= -1;
+                DragonFlip();
+                break;
+
+
+            case "Player Bullet":
                 maximumHealth--;
                 hitEffectMaterial.color = hitEffectColor;
                 standStill = false;
@@ -249,41 +282,6 @@ public class Dragon_AI : MonoBehaviour
                     movementSpeed *= -1;
                 }
                 break;
-            case "Stalagmit":
-                maximumHealth--;
-                hitEffectMaterial.color = hitEffectColor;
-                standStill = false;
-                activePatrol = true;
-                spriteRenderer.material = hitEffectMaterial;
-                StartCoroutine(HitFlashRountime());
-                if (maximumHealth <= 0)
-                {
-                    animator.SetBool("Dragon Dead", true);
-                    dragonIsDead = true;
-                    rigidBody.bodyType = RigidbodyType2D.Static;
-                    circleCollider.enabled = false;
-                    capsulCollider.enabled = false;
-                    Destroy(this.gameObject, 1);
-                }
-                break;
         }
-    }
-
-    private IEnumerator HitFlashRountime()
-    {
-        yield return new WaitForSeconds(hitEffectDuration);
-        spriteRenderer.material = originalMaterial;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(detectionSensorPointer.position, detectionSensorRadius);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(attackRadiusPointer.position, attacRadiusSizes);
     }
 }

@@ -8,24 +8,32 @@ public class Eye_AI : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private float targetDetectionRadius;
     [SerializeField] private float targetPursitRadius;
+    [SerializeField] private float hitEffectDuriation;
+    [SerializeField] private Color hitEffectColor;
     [Space(15)]
     [SerializeField] private Transform target;
     [Space(28)]
     [SerializeField] private LayerMask whoIsPlayer;
     [Space(10)]
+    [SerializeField] private Material hitEffectMaterial;
     [SerializeField] private Transform targetDetectionSensorPointer;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rigidBody2D;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private CircleCollider2D circleCollider;
 
 
+    private Material originalMaterial;
 
     private bool facingRight = true;
     private bool targetCaptured;
     private bool playerIsDeadOrWin = false;
+    private bool targerShootMe = false;
 
     private void Start()
     {
+        originalMaterial = spriteRenderer.material;
+
         Player_Actions.PlayerIsWin.AddListener(PlayerIsDeadOrWin);
         Player_Actions.PlayerIsDead.AddListener(PlayerIsDeadOrWin);
     }
@@ -54,7 +62,7 @@ public class Eye_AI : MonoBehaviour
             }
 
 
-            if (targetCaptured)
+            if (targetCaptured || targerShootMe)
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.position, flySpeed);
 
@@ -87,26 +95,37 @@ public class Eye_AI : MonoBehaviour
         Gizmos.DrawWireSphere(targetDetectionSensorPointer.position, targetPursitRadius);
     }
 
+    private IEnumerator ReturnDefaultColor()
+    {
+        yield return new WaitForSeconds(hitEffectDuriation);
+        spriteRenderer.material = originalMaterial;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
         {
             case "Player":
-                flySpeed = 0;
-                rigidBody2D.velocity = Vector2.zero;
-                rigidBody2D.bodyType = RigidbodyType2D.Static;
+                playerIsDeadOrWin = true;
                 break;
 
-            case "Bullet":
-                maxHealth--;
-                if(maxHealth <= 0)
+            case "Player Bullet":
+                if (!playerIsDeadOrWin)
                 {
-                    flySpeed = 0;
-                    rigidBody2D.velocity = Vector2.zero;
-                    animator.SetBool("Eye Dead", true);
-                    rigidBody2D.gravityScale = 1;
-                    circleCollider.isTrigger = false;
-                    Destroy(this.gameObject, 2f);
+                    hitEffectMaterial.color = hitEffectColor;
+                    spriteRenderer.material = hitEffectMaterial;
+                    StartCoroutine(ReturnDefaultColor());
+                    targerShootMe = true;
+                    maxHealth--;
+                    if (maxHealth <= 0)
+                    {
+                        playerIsDeadOrWin = true;
+                        gameObject.tag = "Untagged";
+                        circleCollider.isTrigger = false;
+                        animator.SetBool("Eye Dead", true);
+                        rigidBody2D.gravityScale = 1;
+                        Destroy(this.gameObject, 2f);
+                    }
                 }
                 break;
         }

@@ -97,6 +97,21 @@ public class Slug_AI : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    private IEnumerator ReturnOriginalMaterial()
+    {
+        yield return new WaitForSeconds(hitEffectDuration);
+        spriteRenderer.material = originalMaterial;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(dtectionSensorPointer.position, detectionRadius);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
@@ -109,7 +124,15 @@ public class Slug_AI : MonoBehaviour
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
-            case "Dangerious":
+            case "Slug":
+                movementSpeed *= -1;
+                SlugFlip();
+                break;
+            case "Frog":
+                movementSpeed *= -1;
+                SlugFlip();
+                break;
+            case "Dragon":
                 movementSpeed *= -1;
                 SlugFlip();
                 break;
@@ -120,7 +143,7 @@ public class Slug_AI : MonoBehaviour
                 standStill = false;
                 activePatrol = true;
                 spriteRenderer.material = hitEffectMaterial;
-                StartCoroutine(HitFlashRountime());
+                StartCoroutine(ReturnOriginalMaterial());
                 if(maximumHealth <= 0)
                 {
                     animator.SetBool("Slug Dead", true);
@@ -143,20 +166,5 @@ public class Slug_AI : MonoBehaviour
                 }
                 break;
         }
-    }
-
-    private IEnumerator HitFlashRountime()
-    {
-        yield return new WaitForSeconds(hitEffectDuration);
-        spriteRenderer.material = originalMaterial;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(groundSensorPointer.position, groundSensorRadius);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(dtectionSensorPointer.position, detectionRadius);
     }
 }

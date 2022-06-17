@@ -6,12 +6,16 @@ public class Player_Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeTime;
-    [Space(10)]
+    [Space(30)]
     [SerializeField] private ParticleSystem grounHitParticles;
-    [SerializeField] private ParticleSystem slugHitParticles;
     [SerializeField] private ParticleSystem boxHitParticles;
+    [Space(10)]
+    [SerializeField] private ParticleSystem slugHitParticles;
     [SerializeField] private ParticleSystem dragonHitParticles;
-    [Space(20)]
+    [SerializeField] private ParticleSystem frogHitParticles;
+    [SerializeField] private ParticleSystem eyeHitParticles;
+    [SerializeField] private ParticleSystem sceletonHitParticles;
+    [Space(25)]
     [SerializeField] private Rigidbody2D rigidbod;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private BoxCollider2D boxCollider;
@@ -19,10 +23,9 @@ public class Player_Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        rigidbod.bodyType = RigidbodyType2D.Dynamic;
-        spriteRenderer.enabled = true;
         boxCollider.enabled = true;
-
+        spriteRenderer.enabled = true;
+        rigidbod.bodyType = RigidbodyType2D.Dynamic;
         rigidbod.AddForce(transform.right * bulletSpeed, ForceMode2D.Impulse);
         StartCoroutine(BulletDisable());
     }
@@ -43,6 +46,20 @@ public class Player_Bullet : MonoBehaviour
                 spriteRenderer.enabled = false;
                 grounHitParticles.Play();
                 break;
+            case "Box":
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                boxCollider.enabled = false;
+                spriteRenderer.enabled = false;
+                boxHitParticles.Play();
+                break;
+            case "Dangerious":
+                rigidbod.bodyType = RigidbodyType2D.Static;
+                boxCollider.enabled = false;
+                spriteRenderer.enabled = false;
+                grounHitParticles.Play();
+                break;
+
+
             case "Slug":
                 rigidbod.bodyType = RigidbodyType2D.Static;
                 boxCollider.enabled = false;
@@ -53,7 +70,7 @@ public class Player_Bullet : MonoBehaviour
                 rigidbod.bodyType = RigidbodyType2D.Static;
                 boxCollider.enabled = false;
                 spriteRenderer.enabled = false;
-                slugHitParticles.Play();
+                frogHitParticles.Play();
                 break;
             case "Dragon":
                 rigidbod.bodyType = RigidbodyType2D.Static;
@@ -61,23 +78,17 @@ public class Player_Bullet : MonoBehaviour
                 spriteRenderer.enabled = false;
                 dragonHitParticles.Play();
                 break;
-            case "Box":
+            case "Eye":
                 rigidbod.bodyType = RigidbodyType2D.Static;
                 boxCollider.enabled = false;
                 spriteRenderer.enabled = false;
-                boxHitParticles.Play();
+                eyeHitParticles.Play();
                 break;
-            case "Stalagmit":
+            case "Skeleton":
                 rigidbod.bodyType = RigidbodyType2D.Static;
                 boxCollider.enabled = false;
                 spriteRenderer.enabled = false;
-                grounHitParticles.Play();
-                break;
-            case "Key Block":
-                rigidbod.bodyType = RigidbodyType2D.Static;
-                boxCollider.enabled = false;
-                spriteRenderer.enabled = false;
-                grounHitParticles.Play();
+                sceletonHitParticles.Play();
                 break;
         }
     }
