@@ -11,6 +11,7 @@ public class Game_UI_Controller : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [Space(10)]
     [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject skipButton;
     [SerializeField] private Text levelNumberIndicator;
 
 
@@ -27,13 +28,16 @@ public class Game_UI_Controller : MonoBehaviour
 
     public void PauseGame()
     {
+        skipButton.SetActive(false);
         pauseButton.SetActive(false);
         pausePanel.SetActive(true);
+
         Time.timeScale = 0;
     }
 
     public void ContinueGame()
     {
+        skipButton.SetActive(true);
         pauseButton.SetActive(true);
         pausePanel.SetActive(false);
         Time.timeScale = 1;

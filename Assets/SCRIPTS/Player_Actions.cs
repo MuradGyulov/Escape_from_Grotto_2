@@ -38,7 +38,6 @@ public class Player_Actions : MonoBehaviour
 
     public static UnityEvent PlayerIsWin = new UnityEvent();
     public static UnityEvent PlayerIsDead = new UnityEvent();
-    public static UnityEvent<string> VideoTrigger = new UnityEvent<string>();
 
     private Player_Pools playerPools;
 
