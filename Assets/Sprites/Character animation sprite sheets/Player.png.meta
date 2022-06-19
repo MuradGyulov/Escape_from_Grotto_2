@@ -1190,7 +1190,7 @@ TextureImporter:
       name: Watch left
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 92
         width: 15
         height: 15
@@ -1224,6 +1224,48 @@ TextureImporter:
       bones: []
       spriteID: d9d7f6767b8f2a64b9f420021316d920
       internalID: -1472247112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Look Right Up
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 92
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8532f753664e8bc45a0711affcada6f4
+      internalID: 1688774024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I have a gun
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a62ce27645fcc144845078d7425ab12
+      internalID: -2075967731
       vertices: []
       indices: 
       edges: []
@@ -1275,6 +1317,7 @@ TextureImporter:
       Jump 1: -737174538
       Shoot 9: 866981915
       Player cutscene 19: -2103964419
+      Look Right Up: 1688774024
       Run 8: 158094754
       Shoot 10: 1738386396
       Climbing 6: 1524287949
@@ -1303,6 +1346,7 @@ TextureImporter:
       Shoot 2: 1953492520
       Dead 1: 1088305030
       Run 1: -138785302
+      I have a gun: -2075967731
       Climbing 1: 895235243
       Climbing 7: -1199116729
       Jump 3: -174941774

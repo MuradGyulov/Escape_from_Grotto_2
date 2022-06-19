@@ -238,7 +238,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1736001693}
     - target: {fileID: 8429503833320245206, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_SceneBindings.Array.data[5].value
+      propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 1777638630}
     m_RemovedComponents: []
@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 7
+      value: 7.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
