@@ -124,7 +124,7 @@ public class Eye_AI : MonoBehaviour
                         circleCollider.isTrigger = false;
                         animator.SetBool("Eye Dead", true);
                         rigidBody2D.gravityScale = 1;
-                        Destroy(this.gameObject, 2f);
+                        Destroy(this.gameObject, 1f);
                     }
                 }
                 break;

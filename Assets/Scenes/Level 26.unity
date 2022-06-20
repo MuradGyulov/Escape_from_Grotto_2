@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1194620931, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1312245447}
+    - target: {fileID: 1194620931, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].value
+      value: 
+      objectReference: {fileID: 1944537269}
     - target: {fileID: 668298750236233646, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -230,7 +238,7 @@ PrefabInstance:
     - target: {fileID: 3301925847115434066, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1152404711}
+      objectReference: {fileID: 1312245449}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -281,13 +289,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3947e64c8378824ebececb456e7d970, type: 3}
---- !u!1001 &1152404710
+--- !u!1001 &1268170919
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 986071861, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 986071863, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899152520, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8311731028676706926, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -338,10 +358,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
---- !u!4 &1152404711 stripped
+--- !u!95 &1312245447 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8311731028676706933, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+  m_PrefabInstance: {fileID: 1268170919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1312245449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8311731028676706930, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
-  m_PrefabInstance: {fileID: 1152404710}
+  m_PrefabInstance: {fileID: 1268170919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1944537269 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1736001693, guid: d3947e64c8378824ebececb456e7d970, type: 3}
+  m_PrefabInstance: {fileID: 766922730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2104672046
 PrefabInstance:
@@ -350,6 +380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5172956378455493039, guid: c743236f1bfda224793f5b9e9cbeb708, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 7.0000005
+      objectReference: {fileID: 0}
     - target: {fileID: 5414009320767903320, guid: c743236f1bfda224793f5b9e9cbeb708, type: 3}
       propertyPath: m_RootOrder
       value: 0
