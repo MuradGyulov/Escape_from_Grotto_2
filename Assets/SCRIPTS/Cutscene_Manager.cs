@@ -19,7 +19,9 @@ public class Cutscene_Manager : MonoBehaviour
     [SerializeField] private GameObject level_33_Video;
     [SerializeField] private GameObject level_36_Video;
     [SerializeField] private GameObject level_38_Video;
-
+    [SerializeField] private GameObject level_46_Video;
+    [SerializeField] private GameObject level_49_Video;
+    [SerializeField] private GameObject level_50_Video;
     [Space(26)]
     [SerializeField] private Button skipButton;
     [SerializeField] private GameObject vegnetteHole;
@@ -76,6 +78,15 @@ public class Cutscene_Manager : MonoBehaviour
             case 38:
                 level_38_Video.SetActive(true);
                 break;
+            case 46:
+                level_46_Video.SetActive(true);
+                break;
+            case 49:
+                level_49_Video.SetActive(true);
+                break;
+            case 50:
+                level_50_Video.SetActive(true);
+                break;
         }
 
         StartCoroutine(Enabled());
@@ -95,6 +106,9 @@ public class Cutscene_Manager : MonoBehaviour
         level_33_Video.SetActive(false);
         level_36_Video.SetActive(false);
         level_38_Video.SetActive(false);
+        level_46_Video.SetActive(false);
+        level_49_Video.SetActive(false);
+        level_50_Video.SetActive(false);
 
 
         vegnetteHole.SetActive(false);

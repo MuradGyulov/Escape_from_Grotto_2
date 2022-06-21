@@ -1247,6 +1247,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 958880805591125913, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[24].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 958880805591125913, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[25].m_Data
+      value: 
+      objectReference: {fileID: -2136409760, guid: 4e59fe2102b68c24f84eec77fa284cc9, type: 3}
+    - target: {fileID: 958880805591125913, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[24].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 958880805591125913, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[25].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 958880805591125913, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
+      propertyPath: m_Tiles.Array.data[1421].second.m_TileSpriteIndex
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 958880806095352653, guid: ef8a903f326bcf34bbad941924d73f25, type: 3}
       propertyPath: m_RootOrder
       value: 0

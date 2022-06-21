@@ -241,7 +241,7 @@ MonoBehaviour:
   standStill: 1
   activePatrol: 0
   target: {fileID: 0}
-  maximumHealth: 10
+  maximumHealth: 9
   movementSpeed: 1.5
   hitEffectDuration: 0.16
   hitEffectColor: {r: 0.73333335, g: 0.9686275, b: 0.49803925, a: 1}
