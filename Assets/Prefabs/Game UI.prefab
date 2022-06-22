@@ -2120,7 +2120,7 @@ GameObject:
   - component: {fileID: 547367065}
   - component: {fileID: 547367066}
   m_Layer: 5
-  m_Name: Level 50. It's dark in here
+  m_Name: Level 50. I am scared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2159,7 +2159,7 @@ PlayableDirector:
   m_GameObject: {fileID: 547367064}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 688cf1843fec4d64b9b02f4430b7de19, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2198,6 +2198,28 @@ PlayableDirector:
   - key: {fileID: 7553810744265866160, guid: 894512746966cc140998eae32d246842, type: 2}
     value: {fileID: 0}
   - key: {fileID: -3562573292277671690, guid: 688cf1843fec4d64b9b02f4430b7de19, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3562573292277671690, guid: 4dc0676001c2d654282e40ee639b4cf5, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1968363773363596053, guid: 4dc0676001c2d654282e40ee639b4cf5, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8647285472211382041, guid: 4dc0676001c2d654282e40ee639b4cf5, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 772031205543756086, guid: 4dc0676001c2d654282e40ee639b4cf5, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 5624080348200615138, guid: 4dc0676001c2d654282e40ee639b4cf5, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7187380903912165373, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
+    value: {fileID: 1973827422}
+  - key: {fileID: -3981179213526785023, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
+    value: {fileID: 1954035749}
+  - key: {fileID: 3553145091099277661, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
+    value: {fileID: 1117285790}
+  - key: {fileID: -4005512221234240258, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
+    value: {fileID: 500554646}
+  - key: {fileID: 718008413444568081, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1976349989607376823, guid: 8879e0b62c725c0449002fc9b2c15c27, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -6488,8 +6510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c290cfba0f1266940b295c50c25a6804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  russianMessageVersion: "\u0417\u0434\u0435\u0441\u044C \u0442\u0435\u043C\u043D\u043E."
-  englishMessageVersion: It's dark in here.
+  russianMessageVersion: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0432\u0438\u0436\u0443.
+    \u0422\u0435\u043C\u043D\u043E \u043A\u0430\u043A \u0432 \u0433\u0440\u043E\u0431\u0443."
+  englishMessageVersion: I don't see anything. It's as dark as a coffin.
 --- !u!1 &1954035749
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,9 +7533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c290cfba0f1266940b295c50c25a6804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  russianMessageVersion: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C \u044F \u0432\u044B\u0431\u0435\u0440\u0443\u0441\u044C
-    \u043E\u0442\u0441\u044E\u0434\u0430."
-  englishMessageVersion: I hope I get out of here.
+  russianMessageVersion: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u044F \u043D\u0430\u0439\u0434\u0443
+    \u0432\u044B\u0445\u043E\u0434."
+  englishMessageVersion: I hope I'll find a way out.
 --- !u!1 &191779615514244971
 GameObject:
   m_ObjectHideFlags: 0

@@ -110,7 +110,6 @@ public class Cutscene_Manager : MonoBehaviour
         level_49_Video.SetActive(false);
         level_50_Video.SetActive(false);
 
-
         vegnetteHole.SetActive(false);
         vegnettePanel.SetActive(false);
         skipButton.gameObject.SetActive(false);
