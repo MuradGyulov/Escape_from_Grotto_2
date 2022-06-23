@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialog Message
+      name: Left Dialog Message
       rect:
         serializedVersion: 2
         x: 1
@@ -346,6 +346,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Right Dialog Message
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 8
+        width: 83
+        height: 54
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a359fdd76bb5a4ab74e342533e70ab
+      internalID: 1910050342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -359,12 +380,13 @@ TextureImporter:
     nameFileIdTable:
       Pause: -1038428013
       Play: -1863670566
+      Left Dialog Message: -307568873
       Settings panel: 109282452
       Menu: -1347535923
       Levels panel: 606350878
-      Dialog Message: -307568873
       Shoop: 1349468979
       Button: -297880318
+      Right Dialog Message: 1910050342
       Settings: 1724140884
       Repeat: -1757412890
       Close: 1104291320
