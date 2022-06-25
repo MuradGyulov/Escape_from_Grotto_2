@@ -1270,6 +1270,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sleeping
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fa7998b3907e744a23847228529ce3
+      internalID: -857884964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1294,6 +1315,7 @@ TextureImporter:
       Start cutscene 3: 10890616
       Climbing 4: -1456764065
       Start cutscene 18: -1021148181
+      Sleeping: -857884964
       Push 6: -661980921
       Start cutscene 10: 1805087275
       Start cutscene 15: 1405944242

@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 5314034719114549350}
   - component: {fileID: 5314034719114549351}
   - component: {fileID: 5314034719114549352}
+  - component: {fileID: 2074621243496073918}
   m_Layer: 0
   m_Name: Gates
   m_TagString: Gates
@@ -727,6 +728,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.49336243, y: 1.520949}
   m_EdgeRadius: 0
+--- !u!114 &2074621243496073918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314034719114549354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23b03f3735177341b2c86daeb4af66c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5314034719254076755
 GameObject:
   m_ObjectHideFlags: 0
