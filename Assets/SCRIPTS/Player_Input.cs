@@ -14,9 +14,15 @@ public class Player_Input : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) { IsJump.Invoke(); }
+        if (Input.GetKeyDown(KeyCode.W)) { IsJump.Invoke(); }
         if (Input.GetMouseButton(0)) { IsFire = true; } else { IsFire = false; }
+
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
     }
+
+    public void MoveLeftButton() { Horizontal = -1; }
+    public void MoveRightButton() { Horizontal = 1; }
+    public void JumpButton() { IsJump.Invoke(); }
+    public void OpenFireButton() { IsFire = true; }
 }

@@ -128,6 +128,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8311731028676706930, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
   m_PrefabInstance: {fileID: 8311731029368389953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1555315566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555315568}
+  - component: {fileID: 1555315567}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1555315567
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555315566}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -5480954278950594886, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3182061167763865583, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3874395643733902850, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8429723384726627937, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6612132058535135154, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7019995386962427473, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8465694413629994189, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -694836357133236673, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8008292527492862010, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8824926442503734220, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6117381009142591437, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6151260242093253893, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 1870839363558207193, guid: 4c0af0b5fefc8054589c4492414c5f8f, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1555315568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555315566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.519394, y: 27.108774, z: 0.24656755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1736001693 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1736001693, guid: d3947e64c8378824ebececb456e7d970, type: 3}
@@ -145,6 +220,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191779615514244971, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 668298750236233646, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -231,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3163667912380375732, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Name
-      value: Game UI
+      value: Game Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8429503833320245206, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
