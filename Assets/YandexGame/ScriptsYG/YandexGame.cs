@@ -880,10 +880,11 @@ namespace YG
                     public bool isFirstSession = true;
                     public string language = "ru";
 
-                    // Ваши сохранения
-                    public int completedLevel = 0;
-                    public float soundsVolume = 0;
-                    public float musicVolume = 0;
+            // Ваши сохранения
+            public int completedLevels;
+            public float soundsVolume = 0.5f;
+            public float musicVolume = 0.14f;
+            public float cameraSize = 5.625f;
                 }
         #endregion Json
     }

@@ -20,6 +20,8 @@ TagManager:
   - Eye
   - Skeleton
   - Dragon Fireball
+  - Music Player
+  - Main Menu Camera
   layers:
   - Default
   - TransparentFX

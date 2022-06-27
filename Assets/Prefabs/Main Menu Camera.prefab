@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3301925847115434067}
   - component: {fileID: 3301925847115434156}
   - component: {fileID: 3301925847115434158}
+  - component: {fileID: 1406983910}
   m_Layer: 0
   m_Name: Main Menu Camera
-  m_TagString: MainCamera
+  m_TagString: Main Menu Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -60,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -84,3 +85,16 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3301925847115434159}
   m_Enabled: 1
+--- !u!114 &1406983910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301925847115434159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4018fe8e9789d45a91bb0e3c52bfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuCameraSize: 0

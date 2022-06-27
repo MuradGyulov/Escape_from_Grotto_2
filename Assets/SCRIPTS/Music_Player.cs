@@ -8,7 +8,7 @@ public class Music_Player : MonoBehaviour
     private AudioSource audioSource;
 
 
-    private void Awake()
+    private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(this);
@@ -21,5 +21,10 @@ public class Music_Player : MonoBehaviour
         {
             Object.Destroy(gameObject);
         }
+    }
+
+    public void ChangingMusicVolume(float volume)
+    {
+        audioSource.volume = volume;
     }
 }

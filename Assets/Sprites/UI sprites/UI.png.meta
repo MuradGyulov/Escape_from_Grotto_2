@@ -497,8 +497,8 @@ TextureImporter:
       name: Music slider handle
       rect:
         serializedVersion: 2
-        x: 118
-        y: 45
+        x: 1
+        y: 23
         width: 15
         height: 18
       alignment: 0
@@ -518,8 +518,8 @@ TextureImporter:
       name: Sounds slider handle
       rect:
         serializedVersion: 2
-        x: 134
-        y: 45
+        x: 17
+        y: 23
         width: 15
         height: 18
       alignment: 0
@@ -531,6 +531,27 @@ TextureImporter:
       bones: []
       spriteID: 831251d7847a25b41a01346118a86c95
       internalID: 633976380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera size slider handle
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 23
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d44a4dc1f299e418e1bced2eb430ed
+      internalID: -2027827249
       vertices: []
       indices: 
       edges: []
@@ -556,6 +577,7 @@ TextureImporter:
       Slider fill: 854608655
       Fire: 706560007
       Levels panel: 606350878
+      Camera size slider handle: -2027827249
       Sounds slider handle: 633976380
       Level: -297880318
       Figth: 1349468979

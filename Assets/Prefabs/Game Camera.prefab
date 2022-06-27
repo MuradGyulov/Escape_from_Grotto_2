@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3301925847115434067}
   - component: {fileID: 3301925847115434156}
   - component: {fileID: 3301925847115434158}
-  - component: {fileID: 3301925847115434066}
   - component: {fileID: 1736001693}
+  - component: {fileID: 3301925847115434066}
   m_Layer: 0
   m_Name: Game Camera
   m_TagString: MainCamera
@@ -86,21 +86,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3301925847115434159}
   m_Enabled: 1
---- !u!114 &3301925847115434066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3301925847115434159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b10d98afc76e574e946f5a03f85f69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  followingSpeed: 0.1
-  cameraOffset: {x: 0, y: 0, z: -10}
 --- !u!95 &1736001693
 Animator:
   serializedVersion: 4
@@ -121,3 +106,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3301925847115434066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3301925847115434159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b10d98afc76e574e946f5a03f85f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followingSpeed: 0.07
+  cameraOffset: {x: 0, y: 0, z: -10}

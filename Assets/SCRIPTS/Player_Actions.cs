@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class Player_Actions : MonoBehaviour
 {
@@ -45,7 +46,6 @@ public class Player_Actions : MonoBehaviour
     private bool facingRight;
     private bool isGrounded;
     private bool isPaused;
-    private bool onLadders;
     private bool isTouchBox;
     [HideInInspector] public bool isStop;
 
@@ -53,8 +53,8 @@ public class Player_Actions : MonoBehaviour
     private void Start()
     {
         Player_Input.IsJump.AddListener(PlayerJump);
-
         playerPools = GetComponent<Player_Pools>();
+        audios.volume = YandexGame.savesData.soundsVolume;
     }
 
     private void FixedUpdate()
@@ -87,11 +87,9 @@ public class Player_Actions : MonoBehaviour
             }
         }
 
-
         PlayerRun();
         PlayerPush();
         PlayerShoot();
-        PlayerClimbing();
     }
 
 
@@ -111,21 +109,6 @@ public class Player_Actions : MonoBehaviour
             {
                 PlayerFlip();
             }
-        }
-    }
-
-    private void PlayerClimbing()
-    {
-        if (onLadders && Player_Input.Vertical > 0)
-        {
-            rigid2D.gravityScale = 0;
-            animator.SetFloat("Climbing", Mathf.Abs(Player_Input.Vertical));
-            rigid2D.velocity = new Vector2(rigid2D.velocity.x, climbingSpeed);
-        }
-        else
-        {
-            animator.SetFloat("Climbing", 0);
-            rigid2D.gravityScale = 3;
         }
     }
 
@@ -228,9 +211,6 @@ public class Player_Actions : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "Ladders":
-                onLadders = true;
-                break;
             case "Gates":
                 if (!isStop)
                 {
@@ -338,11 +318,5 @@ public class Player_Actions : MonoBehaviour
                 }
                 break;
         }
-    }
-
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        onLadders = false;
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
+using YG;
 
 public class Cutscene_Manager : MonoBehaviour
 {
@@ -23,18 +24,26 @@ public class Cutscene_Manager : MonoBehaviour
     [SerializeField] private GameObject level_49_Video;
     [SerializeField] private GameObject level_50_Video;
     [Space(26)]
+    [SerializeField] private Text levelNumberIndicator;
     [SerializeField] private Button skipButton;
     [SerializeField] private GameObject vegnetteHole;
     [SerializeField] private GameObject vegnettePanel;
-    [SerializeField] private Text levelNumberIndicator;
+    [SerializeField] private GameObject mobileControlButtonsPanel;
+
 
     private GameObject Player;
     private Player_Actions playerActions;
     private Player_Input playerInput;
     private Player_Pools playerPools;
 
-    private void Awake()
-    {        
+    private bool is_Tablet;
+    private bool is_Mobile;
+
+    private void Start()
+    {
+        is_Tablet = YandexGame.EnvironmentData.isTablet;
+        is_Mobile = YandexGame.EnvironmentData.isMobile;
+
         Player = GameObject.FindGameObjectWithTag("Player");
         playerActions = Player.GetComponent<Player_Actions>();
         playerInput = Player.GetComponent<Player_Input>();
@@ -44,52 +53,70 @@ public class Cutscene_Manager : MonoBehaviour
         {
             case 1:
                 level_1_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 4:
                 level_4_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 5:
                 level_5_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 6:
                 level_6_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 10:
                 level_10_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 13:
                 level_13_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 15:
                 level_15_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 26:
                 level_26_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 27:
                 level_27_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 33:
                 level_33_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 36:
                 level_36_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 38:
                 level_38_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 46:
                 level_46_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 49:
                 level_49_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
                 break;
             case 50:
                 level_50_Video.SetActive(true);
+                skipButton.gameObject.SetActive(true);
+                break;
+            default:
+                if(is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
                 break;
         }
 
-        StartCoroutine(Enabled());
+        StartCoroutine(EnableCutscenePlayer());
     }
 
     public void SkipVideos()
@@ -113,16 +140,18 @@ public class Cutscene_Manager : MonoBehaviour
         vegnetteHole.SetActive(false);
         vegnettePanel.SetActive(false);
         skipButton.gameObject.SetActive(false);
+
         levelNumberIndicator.gameObject.SetActive(true);
+        if (is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
 
         playerActions.enabled = true;
         playerInput.enabled = true;
         playerPools.enabled = true; 
-        StopCoroutine(Enabled());
+        StopCoroutine(EnableCutscenePlayer());
     }
 
 
-    private IEnumerator Enabled()
+    private IEnumerator EnableCutscenePlayer()
     {
         while (true)
         {
@@ -130,6 +159,7 @@ public class Cutscene_Manager : MonoBehaviour
             {
                 levelNumberIndicator.gameObject.SetActive(true);
                 skipButton.gameObject.SetActive(false);
+                if (is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
 
                 StopEnabled();
             }
@@ -139,6 +169,6 @@ public class Cutscene_Manager : MonoBehaviour
 
     private void StopEnabled()
     {
-        StopCoroutine(Enabled());
+        StopCoroutine(EnableCutscenePlayer());
     }
 }

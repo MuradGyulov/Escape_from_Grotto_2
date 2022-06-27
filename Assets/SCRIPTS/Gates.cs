@@ -10,7 +10,8 @@ public class Gates : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            YandexGame.savesData.completedLevel = SceneManager.GetActiveScene().buildIndex + 1;
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            YandexGame.savesData.completedLevels = sceneIndex + 1;
             YandexGame.SaveProgress();
         }
     }
