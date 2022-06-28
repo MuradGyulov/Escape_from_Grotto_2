@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MessageTranslator : MonoBehaviour
 {
+    [SerializeField] private bool withWritingEffect;
+    [Space(14)]
     [SerializeField] private string russianMessageVersion;
     [SerializeField] private string englishMessageVersion;
 
@@ -14,14 +16,27 @@ public class MessageTranslator : MonoBehaviour
     {
         messageText = GetComponentInChildren<Text>();
 
-
-        if (Application.systemLanguage == SystemLanguage.Russian)
-        {
-            StartCoroutine(TextWrite(russianMessageVersion));
+        if (withWritingEffect)
+        {           
+            if (Application.systemLanguage == SystemLanguage.Russian)
+            {
+                StartCoroutine(TextWrite(russianMessageVersion));
+            }
+            else
+            {
+                StartCoroutine(TextWrite(englishMessageVersion));
+            }
         }
         else
         {
-            StartCoroutine(TextWrite(englishMessageVersion));
+            if (Application.systemLanguage == SystemLanguage.Russian)
+            {
+                messageText.text = russianMessageVersion;
+            }
+            else
+            {
+                messageText.text = englishMessageVersion;
+            }
         }
     }
 

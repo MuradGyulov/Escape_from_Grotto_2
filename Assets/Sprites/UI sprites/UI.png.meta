@@ -556,6 +556,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Square
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 348
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde4ed018b09c7846bb934f1b773b5f4
+      internalID: -1810911740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -587,6 +608,7 @@ TextureImporter:
       Settings: 1724140884
       Repeat: -1757412890
       Close: 1104291320
+      Square: -1810911740
       Slider background: -2131786218
   spritePackingTag: 
   pSDRemoveMatte: 0
