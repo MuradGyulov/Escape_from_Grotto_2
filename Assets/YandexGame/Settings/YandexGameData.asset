@@ -61,4 +61,4 @@ MonoBehaviour:
     tk: {fileID: 0}
     uk: {fileID: 0}
     uz: {fileID: 0}
-  debug: 1
+  debug: 0
