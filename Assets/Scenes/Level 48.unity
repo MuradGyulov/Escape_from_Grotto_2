@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1019,6 +1019,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5925995327828036600, guid: fe20df1fe65c6ef4592d6e552c544024, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 7.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925995327828036600, guid: fe20df1fe65c6ef4592d6e552c544024, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 7.0000005
+      objectReference: {fileID: 0}
     - target: {fileID: 6833431762500621325, guid: fe20df1fe65c6ef4592d6e552c544024, type: 3}
       propertyPath: m_Name
       value: Grid Variant. Lv 48
@@ -1252,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 100950401}
     - target: {fileID: 8123897624093094986, guid: c45bc4384295ef74d906647b6d959563, type: 3}
       propertyPath: defence
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8123897624093094986, guid: c45bc4384295ef74d906647b6d959563, type: 3}
       propertyPath: standStill
@@ -1260,7 +1268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8123897624093094986, guid: c45bc4384295ef74d906647b6d959563, type: 3}
       propertyPath: activePatrol
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c45bc4384295ef74d906647b6d959563, type: 3}

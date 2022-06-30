@@ -266,6 +266,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[4].second.m_AnimationSpeed
+      value: 3.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[8].second.m_AnimationSpeed
       value: 3.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
@@ -277,8 +285,12 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[28].second.m_AnimationSpeed
+      propertyPath: m_AnimatedTiles.Array.data[27].second.m_AnimationSpeed
       value: 3.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[28].second.m_AnimationSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[29].second.m_AnimationSpeed
@@ -302,11 +314,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[56].second.m_AnimationSpeed
-      value: 3.0000002
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[62].second.m_AnimationSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233545888512595212, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[63].second.m_AnimationSpeed
+      value: 3.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 5172956378455493039, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
@@ -314,11 +330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5172956378455493039, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 7.0000005
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5172956378455493039, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
-      value: 7
+      value: 7.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 5414009320767903320, guid: c545e7936d76f2440ba7bc33d9509f21, type: 3}
       propertyPath: m_RootOrder
@@ -1625,7 +1641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.z

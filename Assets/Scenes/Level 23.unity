@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5971222312862419357, guid: 0e6a1f8cd990550439eabcc49bdb0637, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 7.0000005
+      objectReference: {fileID: 0}
     - target: {fileID: 6788736286685026392, guid: 0e6a1f8cd990550439eabcc49bdb0637, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[22].x
       value: -6
@@ -1520,7 +1524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.z

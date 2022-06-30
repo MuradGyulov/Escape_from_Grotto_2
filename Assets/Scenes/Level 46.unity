@@ -336,6 +336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1525192776845278929, guid: 61d7996f5926da14d9ef01b6a713459e, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1856316606124302628, guid: 61d7996f5926da14d9ef01b6a713459e, type: 3}
       propertyPath: m_Name
       value: Grid Variant. Lv 46
@@ -711,6 +715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3677a81a31fa4d14e8d76d22adf100f1, type: 3}
+--- !u!95 &1186965212 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1736001693, guid: d3947e64c8378824ebececb456e7d970, type: 3}
+  m_PrefabInstance: {fileID: 353209551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1449249692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,6 +743,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 341917162}
+    - target: {fileID: 563267433162387579, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
+      value: 
+      objectReference: {fileID: 2123846233}
+    - target: {fileID: 563267433162387579, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[7].value
+      value: 
+      objectReference: {fileID: 1186965212}
     - target: {fileID: 668298750236233646, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -969,6 +986,11 @@ PrefabInstance:
 --- !u!4 &2123846226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8311731028676706930, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+  m_PrefabInstance: {fileID: 341917161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2123846233 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8311731028676706933, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
   m_PrefabInstance: {fileID: 341917161}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &488925514256612784

@@ -329,10 +329,10 @@ TextureImporter:
       name: Left Dialog Message
       rect:
         serializedVersion: 2
-        x: 205
-        y: 296
-        width: 75
-        height: 60
+        x: 201
+        y: 287
+        width: 94
+        height: 70
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: Right Dialog Message
       rect:
         serializedVersion: 2
-        x: 152
-        y: 153
+        x: 201
+        y: 216
         width: 94
-        height: 94
+        height: 70
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

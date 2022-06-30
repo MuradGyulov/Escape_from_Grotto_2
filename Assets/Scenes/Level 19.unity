@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1956948693212667139, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
-      value: 7.0000005
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea233a65a0adc5e408da0e7d556f4e57, type: 3}
@@ -536,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.z
@@ -626,6 +626,10 @@ PrefabInstance:
     - target: {fileID: 8847020811009750216, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
+      propertyPath: fireRate
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: ammountCannonAmmoInPool

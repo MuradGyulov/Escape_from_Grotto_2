@@ -377,10 +377,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4473421129248301982, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7509373281581527085, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -456,6 +452,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
       value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []

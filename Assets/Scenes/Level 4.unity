@@ -240,15 +240,24 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 859696731707634585, guid: e52bc1f79a85bcf4da1e9b9a6489d365, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 859696731707634585, guid: e52bc1f79a85bcf4da1e9b9a6489d365, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 859696731707634585, guid: e52bc1f79a85bcf4da1e9b9a6489d365, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
-      value: 7.0000005
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52bc1f79a85bcf4da1e9b9a6489d365, type: 3}
+--- !u!95 &935407146 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1736001693, guid: d3947e64c8378824ebececb456e7d970, type: 3}
+  m_PrefabInstance: {fileID: 1145431022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1109018316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,6 +438,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8311731029368389954}
+    - target: {fileID: 8020427763920000314, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 8311731029368389961}
+    - target: {fileID: 8020427763920000314, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 935407146}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
 --- !u!1001 &1145431022
@@ -448,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3301925847115434067, guid: d3947e64c8378824ebececb456e7d970, type: 3}
       propertyPath: m_LocalPosition.z
@@ -576,3 +593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fb21a5a483a794f897ed459a90096e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8311731029368389961 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8311731028676706933, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+  m_PrefabInstance: {fileID: 8311731029368389953}
+  m_PrefabAsset: {fileID: 0}

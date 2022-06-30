@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &103698978 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1736001693, guid: d3947e64c8378824ebececb456e7d970, type: 3}
+  m_PrefabInstance: {fileID: 651862213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &651862213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,6 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
+--- !u!95 &1573942671 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8311731028676706933, guid: 470efd9f790fecc4aadf8d9bc5931d8d, type: 3}
+  m_PrefabInstance: {fileID: 1045769432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575197724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,7 +418,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 3
+      value: 3.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
@@ -456,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[12].second.m_AnimationSpeed
-      value: 3.0000002
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[15].second.m_AnimationSpeed
@@ -476,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[24].second.m_AnimationSpeed
-      value: 3.0000002
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[25].second.m_AnimationSpeed
@@ -484,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[26].second.m_AnimationSpeed
-      value: 3
+      value: 3.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 1697423104730384042, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[27].second.m_AnimationSpeed
@@ -492,6 +502,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4709096469481609737, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709096469481609737, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5598668042005857788, guid: 7edc18a291a330448a0e6619dd1c79a9, type: 3}
@@ -559,6 +573,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1045769434}
+    - target: {fileID: 1455547072, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[12].value
+      value: 
+      objectReference: {fileID: 1573942671}
+    - target: {fileID: 1455547072, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_SceneBindings.Array.data[13].value
+      value: 
+      objectReference: {fileID: 103698978}
     - target: {fileID: 1734616597, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

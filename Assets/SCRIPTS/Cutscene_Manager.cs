@@ -21,8 +21,8 @@ public class Cutscene_Manager : MonoBehaviour
     [SerializeField] private GameObject level_36_Video;
     [SerializeField] private GameObject level_38_Video;
     [SerializeField] private GameObject level_46_Video;
-    [SerializeField] private GameObject level_49_Video;
-    [SerializeField] private GameObject level_50_Video;
+    [SerializeField] private GameObject level_54_Video;
+    [SerializeField] private GameObject level_55_Video;
     [Space(26)]
     [SerializeField] private Text levelNumberIndicator;
     [SerializeField] private Button skipButton;
@@ -103,13 +103,12 @@ public class Cutscene_Manager : MonoBehaviour
                 level_46_Video.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
-            case 49:
-                level_49_Video.SetActive(true);
+            case 54:
+                level_54_Video.SetActive(true);
                 skipButton.gameObject.SetActive(true);
                 break;
-            case 50:
-                level_50_Video.SetActive(true);
-                skipButton.gameObject.SetActive(true);
+            case 55:
+                level_55_Video.SetActive(true);
                 break;
             default:
                 if(is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
@@ -134,8 +133,8 @@ public class Cutscene_Manager : MonoBehaviour
         level_36_Video.SetActive(false);
         level_38_Video.SetActive(false);
         level_46_Video.SetActive(false);
-        level_49_Video.SetActive(false);
-        level_50_Video.SetActive(false);
+        level_54_Video.SetActive(false);
+        level_55_Video.SetActive(false);
 
         vegnetteHole.SetActive(false);
         vegnettePanel.SetActive(false);
