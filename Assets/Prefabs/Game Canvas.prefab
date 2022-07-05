@@ -5738,11 +5738,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1411726666782140907, guid: 1ddbf52b95131d54cb7e182d5a73e60d, type: 3}
       propertyPath: englishMessageVersion
-      value: Oh. Lucky! Lucky!
+      value: Lucky!
       objectReference: {fileID: 0}
     - target: {fileID: 1411726666782140907, guid: 1ddbf52b95131d54cb7e182d5a73e60d, type: 3}
       propertyPath: russianMessageVersion
-      value: "\u041E. \u041F\u043E\u0432\u0435\u0437\u043B\u043E! \u041F\u043E\u0432\u0435\u0437\u043B\u043E!"
+      value: "\u041F\u043E\u0432\u0435\u0437\u043B\u043E!"
       objectReference: {fileID: 0}
     - target: {fileID: 1785546964074610724, guid: 1ddbf52b95131d54cb7e182d5a73e60d, type: 3}
       propertyPath: m_Pivot.x

@@ -430,7 +430,7 @@ MonoBehaviour:
   fireRate: 0.5
   bulletSpeed: 36
   canShoot: 1
-  touchDownSensorRadius: 0.14
+  touchDownSensorRadius: 0.12
   boxTouchSensorRadius: 0.15
   whatIsGround:
     serializedVersion: 2

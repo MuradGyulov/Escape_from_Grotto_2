@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gates
-  - Ladders
   - Slug
   - Stalagmit
   - Ground
@@ -21,6 +20,7 @@ TagManager:
   - Skeleton
   - Dragon Fireball
   - Music Player
+  - Menu Camera
   - Main Menu Camera
   layers:
   - Default

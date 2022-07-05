@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class Game_Canvas : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class Game_Canvas : MonoBehaviour
     [Space(18)]
     [SerializeField] private Text levelNumberIndicator;
 
+    public static UnityEvent GamePaused = new UnityEvent();
+
     private void Start()
     {
         levelNumberIndicator.text = "Level:" + SceneManager.GetActiveScene().buildIndex;
@@ -29,6 +31,7 @@ public class Game_Canvas : MonoBehaviour
 
     public void PauseGame()
     {
+        GamePaused.Invoke();
         pausePanel.SetActive(true);
         Time.timeScale = 0;
     }

@@ -12,8 +12,10 @@ public class Main_Menu_Camera : MonoBehaviour
         menuCamera = GetComponent<Camera>();
     }
 
-    public void ChangeCameraSize(float size)
+    public void ChangeCameraSize( float size)
     {
         menuCamera.orthographicSize = size;
+        YandexGame.savesData.cameraSize = size;
+        YandexGame.SaveProgress();
     }
 }

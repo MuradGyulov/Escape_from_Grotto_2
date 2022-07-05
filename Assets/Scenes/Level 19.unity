@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: fireRate
-      value: 1.6
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8847020811009750217, guid: 844580e25f5a5b249b9f08a5a55693ba, type: 3}
       propertyPath: ammountCannonAmmoInPool

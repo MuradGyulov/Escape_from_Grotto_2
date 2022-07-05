@@ -377,10 +377,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6370806317206005478, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: englishMessageVersion
+      value: We need to get out of here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370806317206005478, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: russianMessageVersion
+      value: "\u041D\u0443\u0436\u043D\u043E \u0432\u044B\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F
+        \u043E\u0442\u0441\u044E\u0434\u0430."
+      objectReference: {fileID: 0}
     - target: {fileID: 7509373281581527085, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1777638633}
+    - target: {fileID: 8178320594539118645, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: russianMessageVersion
+      value: "\u0413\u0434\u0435 \u042F?"
+      objectReference: {fileID: 0}
     - target: {fileID: 8429503833320245206, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -447,15 +460,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}
-      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6617064759943771916, guid: 8955f2a0a65182543b7b53f78cb72719, type: 3}

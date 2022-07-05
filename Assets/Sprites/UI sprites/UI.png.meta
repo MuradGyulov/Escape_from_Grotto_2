@@ -497,8 +497,8 @@ TextureImporter:
       name: Music slider handle
       rect:
         serializedVersion: 2
-        x: 1
-        y: 23
+        x: 118
+        y: 45
         width: 15
         height: 18
       alignment: 0
@@ -518,8 +518,8 @@ TextureImporter:
       name: Sounds slider handle
       rect:
         serializedVersion: 2
-        x: 17
-        y: 23
+        x: 118
+        y: 26
         width: 15
         height: 18
       alignment: 0
@@ -539,8 +539,8 @@ TextureImporter:
       name: Camera size slider handle
       rect:
         serializedVersion: 2
-        x: 33
-        y: 23
+        x: 134
+        y: 45
         width: 15
         height: 18
       alignment: 0
@@ -577,6 +577,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Review button
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 16
+        width: 116
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa1d6f9bdfd4f143ad57f94f106cde5
+      internalID: 448719748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -599,6 +620,7 @@ TextureImporter:
       Long Square: -1810911740
       Fire: 706560007
       Levels panel: 606350878
+      Review button: 448719748
       Camera size slider handle: -2027827249
       Sounds slider handle: 633976380
       Level: -297880318

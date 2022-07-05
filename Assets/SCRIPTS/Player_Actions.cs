@@ -52,9 +52,15 @@ public class Player_Actions : MonoBehaviour
 
     private void Start()
     {
+        Game_Canvas.GamePaused.AddListener(GamePaused);
         Player_Input.IsJump.AddListener(PlayerJump);
         playerPools = GetComponent<Player_Pools>();
         audios.volume = YandexGame.savesData.soundsVolume;
+    }
+
+    private void GamePaused()
+    {
+        isPaused = true;
     }
 
     private void FixedUpdate()
