@@ -518,8 +518,8 @@ TextureImporter:
       name: Sounds slider handle
       rect:
         serializedVersion: 2
-        x: 118
-        y: 26
+        x: 150
+        y: 45
         width: 15
         height: 18
       alignment: 0
@@ -578,15 +578,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Review button
+      name: Slug button
       rect:
         serializedVersion: 2
         x: 1
-        y: 16
-        width: 116
-        height: 25
+        y: 21
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -594,6 +594,111 @@ TextureImporter:
       bones: []
       spriteID: baa1d6f9bdfd4f143ad57f94f106cde5
       internalID: 448719748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sckeleton button
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 21
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86660d7925cc16d488a1e80a02656565
+      internalID: 706147634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Host button
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 21
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a1e69565a0b3643b70a97031fca507
+      internalID: 875792711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog button
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 21
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6db19e0e747b5441bacd6079c873f03
+      internalID: 1632965921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eye button
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 21
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725011b3bb6b1ea45a864e73b075361b
+      internalID: -1205847126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon button
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 21
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd181c5847a8e3a4bbda38c3085d0ba4
+      internalID: 12767168
       vertices: []
       indices: 
       edges: []
@@ -610,20 +715,24 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Music slider handle: 552180428
+      Frog button: 1632965921
       Pause: -1038428013
       Play: -1863670566
+      Dragon button: 12767168
       Left Dialog Message: -307568873
       Settings panel: 109282452
       Menu: -1347535923
       Move: 150933102
+      Eye button: -1205847126
       Slider fill: 854608655
       Long Square: -1810911740
+      Slug button: 448719748
       Fire: 706560007
       Levels panel: 606350878
-      Review button: 448719748
       Camera size slider handle: -2027827249
       Sounds slider handle: 633976380
       Level: -297880318
+      Host button: 875792711
       Figth: 1349468979
       Button: 1964065461
       Close 2: -227883096
@@ -633,6 +742,7 @@ TextureImporter:
       Close: 1104291320
       Star: -1126053221
       Slider background: -2131786218
+      Sckeleton button: 706147634
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

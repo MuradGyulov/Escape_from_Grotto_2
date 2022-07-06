@@ -884,7 +884,7 @@ namespace YG
             public int completedLevels;
             public float soundsVolume = 0.5f;
             public float musicVolume = 0.14f;
-            public float cameraSize = 4.8f;
+            public float cameraSize = 4.5f;
                 }
         #endregion Json
     }

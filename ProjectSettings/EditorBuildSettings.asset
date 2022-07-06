@@ -173,4 +173,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 55.unity
     guid: e26aa712aceeb49448fd6d4957fe4aad
+  - enabled: 1
+    path: Assets/Scenes/Arena.unity
+    guid: bc161881ebc319e4caa38e23e0d829c1
   m_configObjects: {}

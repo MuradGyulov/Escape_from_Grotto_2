@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8311731029368389954}
+    - target: {fileID: 2404436320705128545, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3163667912380375732, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Name
       value: Game Canvas

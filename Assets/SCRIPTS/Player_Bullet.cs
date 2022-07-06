@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Bullet : MonoBehaviour
@@ -90,6 +89,6 @@ public class Player_Bullet : MonoBehaviour
                 spriteRenderer.enabled = false;
                 sceletonHitParticles.Play();
                 break;
-        }
+        }        
     }
 }

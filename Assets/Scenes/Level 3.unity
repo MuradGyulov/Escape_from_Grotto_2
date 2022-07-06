@@ -539,9 +539,17 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1732562943}
+    - target: {fileID: 2404436320705128545, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3163667912380375732, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473421129248301982, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509373281581527085, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1090,6 +1098,10 @@ PrefabInstance:
     - target: {fileID: 511940414733960714, guid: e4bb4e47b1bfa6e40ba6c7a6e03b6810, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860930496178838013, guid: e4bb4e47b1bfa6e40ba6c7a6e03b6810, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 7.0000005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4bb4e47b1bfa6e40ba6c7a6e03b6810, type: 3}

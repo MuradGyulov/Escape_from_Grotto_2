@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -94,32 +93,6 @@ public class Main_Menu_Canvas : MonoBehaviour
         for (int i = 0; i < savesCompletedLevels; i++)
         {
             levelButtons[i].interactable = true;
-        }
-    }
-
-
-
-
-
-    public void ResetPlayerData()
-    {
-
-        for (int i = 0; i < levelButtons.Length; i++)
-        {
-            if (i != 0) { levelButtons[i].interactable = false; }
-            YandexGame.savesData.completedLevels = 0;
-            YandexGame.SaveProgress();
-        }
-
-    }
-
-    public void SetNumberOfcompletedLevels(int numberOfcompletedlevels)
-    {
-        for (int i = 0; i < numberOfcompletedlevels; i++)
-        {
-            levelButtons[i].interactable = true;
-            YandexGame.savesData.completedLevels = numberOfcompletedlevels;
-            YandexGame.SaveProgress();
         }
     }
 }
