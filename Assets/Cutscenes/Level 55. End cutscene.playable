@@ -620,6 +620,15 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
         time: 72.916664
         value: 0
         inSlope: Infinity
@@ -710,6 +719,15 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 72.916664
         value: 0
@@ -2750,7 +2768,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: Level 55
+  m_Name: Level 55. End cutscene
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:

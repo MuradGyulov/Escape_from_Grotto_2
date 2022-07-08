@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1208754529}
+    - target: {fileID: 7429423581535516634, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
+      propertyPath: standStill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429423581535516634, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
+      propertyPath: activePatrol
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7429423581535516635, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
       propertyPath: m_Name
       value: Frog (2)
@@ -812,6 +820,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1208754529}
+    - target: {fileID: 7429423581535516634, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
+      propertyPath: standStill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429423581535516634, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
+      propertyPath: activePatrol
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7429423581535516635, guid: 4d73cc1a50e809e4f927c32646491682, type: 3}
       propertyPath: m_Name
       value: Frog

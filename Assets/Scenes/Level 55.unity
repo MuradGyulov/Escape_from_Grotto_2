@@ -288,11 +288,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: dd62f691dea1e9446bb32f609913e028, type: 3}
-    m_FontSize: 55
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 55
+    m_MaxSize: 50
     m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.47058827, g: 0.9960785, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.3030753, g: 0.6415094, b: 0, a: 1}
-    m_PressedColor: {r: 0.23475611, g: 0.5, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.23529413, g: 0.5019608, b: 0, a: 1}
+    m_PressedColor: {r: 0.1901533, g: 0.4056604, b: 0, a: 1}
     m_SelectedColor: {r: 0.47058827, g: 0.9960785, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -778,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 547367064, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 547367066, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_SceneBindings.Array.size
