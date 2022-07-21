@@ -46,12 +46,13 @@ public class Player_Actions : MonoBehaviour
     private bool isGrounded;
     private bool isPaused;
     private bool isTouchBox;
-    [HideInInspector] public bool isStop;
+    private bool isStop;
 
 
     private void Start()
     {
         Game_Canvas.GamePaused.AddListener(GamePaused);
+        Game_Canvas.ContinueGame.AddListener(ContinueGame);
         Player_Input.IsJump.AddListener(PlayerJump);
         playerPools = GetComponent<Player_Pools>();
         audios.volume = YandexGame.savesData.soundsVolume;
@@ -60,6 +61,11 @@ public class Player_Actions : MonoBehaviour
     private void GamePaused()
     {
         isPaused = true;
+    }
+
+    private void ContinueGame()
+    {
+        isPaused = false;
     }
 
     private void FixedUpdate()

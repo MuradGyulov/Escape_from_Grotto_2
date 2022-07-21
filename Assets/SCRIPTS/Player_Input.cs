@@ -20,7 +20,7 @@ public class Player_Input : MonoBehaviour
 
     private void Update()
     {
-        if (true)
+        if (Is_Desctop)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
             Vertical = Input.GetAxisRaw("Vertical");

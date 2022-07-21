@@ -9,7 +9,6 @@ public class Game_Canvas : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject deadPanel;
     [SerializeField] private GameObject winPanel;
-    [SerializeField] private GameObject mobileControlButtonsPanel;
     [Space(18)]
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject skipButton;
@@ -17,10 +16,19 @@ public class Game_Canvas : MonoBehaviour
     [SerializeField] private Text levelNumberIndicator;
 
     public static UnityEvent GamePaused = new UnityEvent();
+    public static UnityEvent ContinueGame = new UnityEvent();
 
     private void Start()
     {
-        levelNumberIndicator.text = "Level:" + SceneManager.GetActiveScene().buildIndex;
+        if(Application.systemLanguage == SystemLanguage.Russian)
+        {
+            levelNumberIndicator.text = "Уровень:" + SceneManager.GetActiveScene().buildIndex;
+        }
+        else
+        {
+            levelNumberIndicator.text = "Level:" + SceneManager.GetActiveScene().buildIndex;
+        }
+
         Player_Actions.PlayerIsWin.AddListener(WinDelay);
         Player_Actions.PlayerIsDead.AddListener(DeadDelay);
     }
@@ -35,8 +43,9 @@ public class Game_Canvas : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void ContinueGame()
+    public void ContinuePlaying()
     {
+        ContinueGame.Invoke();
         pausePanel.SetActive(false);
         Time.timeScale = 1;
     }

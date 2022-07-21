@@ -41,9 +41,25 @@ public class Arena_Canvas : MonoBehaviour
         Dragon_AI.monsterIsDead.AddListener(MonsterIsDead);
         Eye_AI.monsterIsDead.AddListener(MonsterIsDead);
 
-        if(YandexGame.EnvironmentData.isTablet || YandexGame.EnvironmentData.isMobile)
+        bool is_Mobile = YandexGame.EnvironmentData.isMobile;
+        bool is_Tablet = YandexGame.EnvironmentData.isTablet;
+        bool is_Desctop = YandexGame.EnvironmentData.isDesktop;
+
+        if (is_Mobile)
         {
             mobileControlButtonsPanel.SetActive(true);
+        }
+        else if (is_Tablet)
+        {
+            mobileControlButtonsPanel.SetActive(true);
+        }
+        else if (is_Desctop)
+        {
+            mobileControlButtonsPanel.SetActive(false);
+        }
+        else
+        {
+            mobileControlButtonsPanel.SetActive(false);
         }
     }
 

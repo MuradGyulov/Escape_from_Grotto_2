@@ -436,34 +436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4473421129248301982, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7329337246136118258, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 425.729
-      objectReference: {fileID: 0}
-    - target: {fileID: 7329337246136118258, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -49
-      objectReference: {fileID: 0}
-    - target: {fileID: 7329337246136118258, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 96
-      objectReference: {fileID: 0}
     - target: {fileID: 7509373281581527085, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1045769434}
-    - target: {fileID: 7832692545942366345, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8818832057273444202, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44c973c1b89ff62458bd9060b9688c47, type: 3}
 --- !u!1001 &1604074338

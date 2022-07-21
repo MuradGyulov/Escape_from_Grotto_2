@@ -37,6 +37,7 @@ public class Cutscene_Manager : MonoBehaviour
 
     private bool is_Tablet;
     private bool is_Mobile;
+    private bool is_Desctop;
 
     private void Start()
     {
@@ -110,7 +111,22 @@ public class Cutscene_Manager : MonoBehaviour
                 level_55_Video.SetActive(true);
                 break;
             default:
-                if(is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
+                if (is_Mobile)
+                {
+                    mobileControlButtonsPanel.SetActive(true);
+                }
+                else if (is_Tablet)
+                {
+                    mobileControlButtonsPanel.SetActive(true);
+                }
+                else if (is_Desctop)
+                {
+                    mobileControlButtonsPanel.SetActive(false);
+                }
+                else
+                {
+                    mobileControlButtonsPanel.SetActive(false);
+                }
                 break;
         }
 
@@ -140,7 +156,22 @@ public class Cutscene_Manager : MonoBehaviour
         skipButton.gameObject.SetActive(false);
 
         levelNumberIndicator.gameObject.SetActive(true);
-        if (is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
+        if (is_Mobile)
+        {
+            mobileControlButtonsPanel.SetActive(true);
+        }
+        else if (is_Tablet)
+        {
+            mobileControlButtonsPanel.SetActive(true);
+        }
+        else if (is_Desctop)
+        {
+            mobileControlButtonsPanel.SetActive(false);
+        }
+        else
+        {
+            mobileControlButtonsPanel.SetActive(false);
+        }
 
         playerActions.enabled = true;
         playerInput.enabled = true;
@@ -157,7 +188,22 @@ public class Cutscene_Manager : MonoBehaviour
             {
                 levelNumberIndicator.gameObject.SetActive(true);
                 skipButton.gameObject.SetActive(false);
-                if (is_Mobile || is_Tablet) { mobileControlButtonsPanel.SetActive(true); }
+                if (is_Mobile)
+                {
+                    mobileControlButtonsPanel.SetActive(true);
+                }
+                else if (is_Tablet)
+                {
+                    mobileControlButtonsPanel.SetActive(true);
+                }
+                else if (is_Desctop)
+                {
+                    mobileControlButtonsPanel.SetActive(false);
+                }
+                else
+                {
+                    mobileControlButtonsPanel.SetActive(false);
+                }
 
                 StopEnabled();
             }
