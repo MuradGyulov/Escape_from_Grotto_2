@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Animated water-fal tile
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 1197449178, guid: 174a605e57f8e3e48b8a1dd3eb9a506a, type: 3}
+  - {fileID: 2075923538, guid: 174a605e57f8e3e48b8a1dd3eb9a506a, type: 3}
+  - {fileID: 972019932, guid: 174a605e57f8e3e48b8a1dd3eb9a506a, type: 3}
+  m_MinSpeed: 2
+  m_MaxSpeed: 3
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
