@@ -33,29 +33,24 @@ namespace YG
             green = new GUIStyle(EditorStyles.label);
             green.normal.textColor = Color.green;
 
-            //if (scr.textUIComponent) EditorGUILayout.PropertyField(serializedObject.FindProperty("textUIComponent"));
-            //else if (scr.textMeshComponent) EditorGUILayout.PropertyField(serializedObject.FindProperty("textMeshComponent"));
-            //else
             if (scr.textUIComponent == null && scr.textMeshComponent == null)
             {
-                if (GUILayout.Button("Определить Text/TextMesh"))
+                if (GUILayout.Button("Identify Text/TextMesh"))
                 {
                     scr.textUIComponent = scr.GetComponent<Text>();
                     scr.textMeshComponent = scr.GetComponent<TextMesh>();
                 }
-                if (GUILayout.Button("Создать Text компонент"))
+                if (GUILayout.Button("Create Text компонент"))
                     scr.textUIComponent = scr.gameObject.AddComponent<Text>();
-                if (GUILayout.Button("Создать TextMesh компонент"))
+                if (GUILayout.Button("Create TextMesh компонент"))
                     scr.textMeshComponent = scr.gameObject.AddComponent<TextMesh>();
 
                 GUILayout.Space(10);
             }
 
-            //if (scr.infoYG) EditorGUILayout.PropertyField(serializedObject.FindProperty("infoYG"));
-            //else
             if (scr.infoYG == null)
             {
-                if (GUILayout.Button("Определить infoYG", GUILayout.Height(35)))
+                if (GUILayout.Button("Identify infoYG", GUILayout.Height(35)))
                 {
                     scr.infoYG = GameObject.Find("YandexGame").GetComponent<YandexGame>().infoYG;
                     if (scr.infoYG == null)
@@ -65,125 +60,207 @@ namespace YG
 
             if (scr.infoYG)
             {
-                GUILayout.Space(10);
-
-                if (!scr.infoYG.autolocationInspector)
-                    scr.textHeight = EditorGUILayout.Slider("Text Height", scr.textHeight, 20f, 400f);
-
-                if (scr.infoYG.autolocationInspector)
+                if (scr.infoYG.translateMethod == InfoYG.TranslateMethod.CSVFile)
                 {
                     GUILayout.BeginVertical("HelpBox");
 
                     scr.componentTextField = EditorGUILayout.ToggleLeft("Component Text/TextMesh Translate", scr.componentTextField);
-                    scr.textHeight = EditorGUILayout.Slider("Text Height", scr.textHeight, 20f, 400f);
+                   
+                    GUILayout.BeginHorizontal();
 
-                    if (!scr.componentTextField)
-                        scr.text = EditorGUILayout.TextArea(scr.text, GUILayout.Height(scr.textHeight));
-                    else
+                    if (GUILayout.Button(">", GUILayout.Width(20)))
                     {
-                        if (scr.textUIComponent) GUILayout.Label("*" + scr.textUIComponent.text);
-                        else if (scr.textMeshComponent) GUILayout.Label("*" + scr.textMeshComponent.text);
+                        TranslationTableEditorWindow.ShowWindow();
                     }
 
-                    GUILayout.BeginHorizontal();
+                    bool availableStr = true;
 
                     if (scr.componentTextField)
                     {
                         if (scr.textUIComponent)
                         {
-                            if (scr.textUIComponent.text.Length > 0)
-                            {
-                                GUILayout.Label("Text Component", green);
+                            GUILayout.Label(scr.textUIComponent.text);
 
-                                if (GUILayout.Button("ПЕРЕВЕСТИ"))
-                                    TranslateButton();
-                            }
-                            else
-                                GUILayout.Label("Text Component", red);
+                            if (scr.textUIComponent == null || scr.textUIComponent.text.Length == 0)
+                                availableStr = false;
                         }
                         else if (scr.textMeshComponent)
                         {
-                            if (scr.textMeshComponent.text.Length > 0)
-                            {
-                                GUILayout.Label("TextMesh Component", green);
+                            GUILayout.Label(scr.textMeshComponent.text);
 
-                                if (GUILayout.Button("ПЕРЕВЕСТИ"))
-                                    TranslateButton();
-                            }
-                            else
-                                GUILayout.Label("TextMesh Component", red);
+                            if (scr.textMeshComponent == null || scr.textMeshComponent.text.Length == 0)
+                                availableStr = false;
                         }
                     }
                     else
                     {
-                        if (scr.componentTextField || (scr.text == null || scr.text.Length == 0))
-                        {
-                            GUILayout.Label("ЗАПОЛНИТЕ ПОЛЕ", red);
-                        }
-                        else if (GUILayout.Button("ПЕРЕВЕСТИ"))
-                            TranslateButton();
+                        if (scr.text == null || scr.text.Length == 0)
+                            availableStr = false;
+
+                        scr.text = EditorGUILayout.TextField(scr.text, GUILayout.Height(20));
+                    }
+                    
+                    if (availableStr)
+                    {
+                        GUILayout.Label("ID Translate");
+                    }
+                    else
+                    {
+                        GUILayout.Label("ID Translate (necessarily)", red);
                     }
 
-                    if (GUILayout.Button("ОЧИСТИТЬ"))
-                    {
-                        scr.ru = "";
-                        scr.en = "";
-                        scr.tr = "";
-                        scr.az = "";
-                        scr.be = "";
-                        scr.he = "";
-                        scr.hy = "";
-                        scr.ka = "";
-                        scr.et = "";
-                        scr.fr = "";
-                        scr.kk = "";
-                        scr.ky = "";
-                        scr.lt = "";
-                        scr.lv = "";
-                        scr.ro = "";
-                        scr.tg = "";
-                        scr.tk = "";
-                        scr.uk = "";
-                        scr.uz = "";
+                    GUILayout.EndHorizontal();
 
-                        scr.processTranslateLabel = "";
-                        scr.countLang = processTranslateLabel;
+                    GUILayout.BeginHorizontal();
+
+                    if (GUILayout.Button("Import"))
+                    {
+                        string[] translfers = CSVManager.ImportTransfersByKey(scr);
+                        if (translfers != null)
+                            scr.languages = CSVManager.ImportTransfersByKey(scr);
+                    }
+                    if (GUILayout.Button("Export"))
+                    {
+                        CSVManager.SetIDLineFile(scr.infoYG, scr);
                     }
 
                     GUILayout.EndHorizontal();
                     GUILayout.EndVertical();
 
+                    scr.textHeight = EditorGUILayout.Slider("Text Height", scr.textHeight, 20f, 400f);
+                    UpdateLanguages(true);
+                }
+                else
+                {
+                    scr.textHeight = EditorGUILayout.Slider("Text Height", scr.textHeight, 20f, 400f);
+
+                    if (scr.infoYG.translateMethod == InfoYG.TranslateMethod.AutoLocalization)
+                    {
+                        GUILayout.BeginVertical("HelpBox");
+
+                        scr.componentTextField = EditorGUILayout.ToggleLeft("Component Text/TextMesh Translate", scr.componentTextField);
+                        scr.textHeight = EditorGUILayout.Slider("Text Height", scr.textHeight, 20f, 400f);
+
+                        if (!scr.componentTextField)
+                            scr.text = EditorGUILayout.TextArea(scr.text, GUILayout.Height(scr.textHeight));
+                        else
+                        {
+                            if (scr.textUIComponent) GUILayout.Label(scr.textUIComponent.text);
+                            else if (scr.textMeshComponent) GUILayout.Label(scr.textMeshComponent.text);
+                        }
+
+                        GUILayout.BeginHorizontal();
+
+                        if (scr.componentTextField)
+                        {
+                            if (scr.textUIComponent)
+                            {
+                                if (scr.textUIComponent.text.Length > 0)
+                                {
+                                    GUILayout.Label("Text Component", green);
+
+                                    if (GUILayout.Button("TRANSLATE"))
+                                        TranslateButton();
+                                }
+                                else
+                                    GUILayout.Label("Text Component", red);
+                            }
+                            else if (scr.textMeshComponent)
+                            {
+                                if (scr.textMeshComponent.text.Length > 0)
+                                {
+                                    GUILayout.Label("TextMesh Component", green);
+
+                                    if (GUILayout.Button("TRANSLATE"))
+                                        TranslateButton();
+                                }
+                                else
+                                    GUILayout.Label("TextMesh Component", red);
+                            }
+                        }
+                        else
+                        {
+                            if (scr.componentTextField || (scr.text == null || scr.text.Length == 0))
+                            {
+                                GUILayout.Label("FILL IN THE FIELD", red);
+                            }
+                            else if (GUILayout.Button("TRANSLATE"))
+                                TranslateButton();
+                        }
+
+                        if (GUILayout.Button("CLEAR"))
+                        {
+                            scr.ru = "";
+                            scr.en = "";
+                            scr.tr = "";
+                            scr.az = "";
+                            scr.be = "";
+                            scr.he = "";
+                            scr.hy = "";
+                            scr.ka = "";
+                            scr.et = "";
+                            scr.fr = "";
+                            scr.kk = "";
+                            scr.ky = "";
+                            scr.lt = "";
+                            scr.lv = "";
+                            scr.ro = "";
+                            scr.tg = "";
+                            scr.tk = "";
+                            scr.uk = "";
+                            scr.uz = "";
+                            scr.es = "";
+                            scr.pt = "";
+                            scr.ar = "";
+                            scr.id = "";
+                            scr.ja = "";
+                            scr.it = "";
+                            scr.de = "";
+                            scr.hi = "";
+
+                            scr.processTranslateLabel = "";
+                            scr.countLang = processTranslateLabel;
+                        }
+
+                        GUILayout.EndHorizontal();
+                        GUILayout.EndVertical();
+                    }
+
                     GUILayout.BeginVertical("box");
                     GUILayout.BeginHorizontal();
 
                     bool labelProcess = false;
-                    if (scr.processTranslateLabel != "")
-                    {
-                        if (scr.countLang == processTranslateLabel)
-                        {
-                            GUILayout.Label(scr.processTranslateLabel, green, GUILayout.Height(20));
-                            labelProcess = true;
-                        }
-                        else if (scr.processTranslateLabel == "")
-                        {
-                            labelProcess = true;
-                        }
-                        else
-                        {
-                            GUILayout.Label(scr.processTranslateLabel, GUILayout.Height(20));
-                            labelProcess = true;
-                        }
 
-                        try
+                    if (scr.infoYG.translateMethod == InfoYG.TranslateMethod.AutoLocalization)
+                    {
+                        if (scr.processTranslateLabel != "")
                         {
-                            if (scr.processTranslateLabel.Contains("error"))
+                            if (scr.countLang == processTranslateLabel)
                             {
-                                GUILayout.Label(scr.processTranslateLabel, red, GUILayout.Height(20));
+                                GUILayout.Label(scr.processTranslateLabel, green, GUILayout.Height(20));
                                 labelProcess = true;
                             }
-                        }
-                        catch
-                        {
+                            else if (scr.processTranslateLabel == "")
+                            {
+                                labelProcess = true;
+                            }
+                            else
+                            {
+                                GUILayout.Label(scr.processTranslateLabel, GUILayout.Height(20));
+                                labelProcess = true;
+                            }
+
+                            try
+                            {
+                                if (scr.processTranslateLabel.Contains("error"))
+                                {
+                                    GUILayout.Label(scr.processTranslateLabel, red, GUILayout.Height(20));
+                                    labelProcess = true;
+                                }
+                            }
+                            catch
+                            {
+                            }
                         }
                     }
 
@@ -193,7 +270,7 @@ namespace YG
                     try
                     {
                         if (!scr.processTranslateLabel.Contains("completed"))
-                            GUILayout.Label("Перезайдите в инспектор!", GUILayout.Height(20));
+                            GUILayout.Label("Go back to the inspector!", GUILayout.Height(20));
                     }
                     catch
                     {
@@ -201,30 +278,33 @@ namespace YG
 
                     GUILayout.EndHorizontal();
 
-                    UpdateLanguages();
+                    UpdateLanguages(false);
                     GUILayout.EndVertical();
                 }
             }
-            
-            if ((scr.textUIComponent || scr.textMeshComponent) && scr.infoYG.fonts.defaultFont != null)
+
+            if (scr.textUIComponent || scr.textMeshComponent)
             {
                 GUILayout.Space(10);
                 GUILayout.BeginVertical("box");
 
-                if (GUILayout.Button("Заменить шрифт на стандартный"))
+                scr.fontNumber = EditorGUILayout.IntField("Font Number", scr.fontNumber);
+                scr.uniqueFont = (Font)EditorGUILayout.ObjectField("Unique Font", scr.uniqueFont, typeof(Font), false);
+
+                if (GUILayout.Button("Replace the font with the standard one"))
                 {
-                    if (scr.infoYG.fonts.defaultFont == null)
-                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) Не указан стандартный шрифт! Укажите его в настройках плагина InfoYG");
-                    else
+                    if (scr.infoYG.fonts.defaultFont.Length >= scr.fontNumber + 1 && scr.infoYG.fonts.defaultFont[scr.fontNumber])
                     {
                         if (scr.textUIComponent)
-                            scr.textUIComponent.font = scr.infoYG.fonts.defaultFont;
+                            scr.textUIComponent.font = scr.infoYG.fonts.defaultFont[scr.fontNumber];
                         else if (scr.textMeshComponent)
-                            scr.textMeshComponent.font = scr.infoYG.fonts.defaultFont;
+                            scr.textMeshComponent.font = scr.infoYG.fonts.defaultFont[scr.fontNumber];
+                    }
+                    else
+                    {
+                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) Не указан стандартный шрифт! Укажите его в настройках плагина InfoYG", scr.gameObject);
                     }
                 }
-
-                scr.uniqueFont = (Font)EditorGUILayout.ObjectField("Default Font ThisObj", scr.uniqueFont, typeof(Font), false);
 
                 GUILayout.EndVertical();
             }
@@ -247,178 +327,49 @@ namespace YG
             }
         }
 
-        void UpdateLanguages()
+        void UpdateLanguages(bool CSVFile)
         {
             processTranslateLabel = 0;
+            bool[] langArr = scr.infoYG.LangArr();
 
-            if (scr.infoYG.languages.ru)
+            for (int i = 0; i < langArr.Length; i++)
             {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("ru", GUILayout.Width(20), GUILayout.Height(20));
-                scr.ru = EditorGUILayout.TextArea(scr.ru, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
+                if (langArr[i])
+                {
+                    processTranslateLabel++;
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Label(new GUIContent(scr.infoYG.LangName(i), CSVManager.FullNameLanguages()[i]), GUILayout.Width(20), GUILayout.Height(20));
 
-            if (scr.infoYG.languages.en)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("en", GUILayout.Width(20), GUILayout.Height(20));
-                scr.en = EditorGUILayout.TextArea(scr.en, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
+                    if (i == 0) scr.ru = EditorGUILayout.TextArea(scr.ru, GUILayout.Height(scr.textHeight));
+                    else if (i == 1) scr.en = EditorGUILayout.TextArea(scr.en, GUILayout.Height(scr.textHeight));
+                    else if (i == 2) scr.tr = EditorGUILayout.TextArea(scr.tr, GUILayout.Height(scr.textHeight));
+                    else if (i == 3) scr.az = EditorGUILayout.TextArea(scr.az, GUILayout.Height(scr.textHeight));
+                    else if (i == 4) scr.be = EditorGUILayout.TextArea(scr.be, GUILayout.Height(scr.textHeight));
+                    else if (i == 5) scr.he = EditorGUILayout.TextArea(scr.he, GUILayout.Height(scr.textHeight));
+                    else if (i == 6) scr.hy = EditorGUILayout.TextArea(scr.hy, GUILayout.Height(scr.textHeight));
+                    else if (i == 7) scr.ka = EditorGUILayout.TextArea(scr.ka, GUILayout.Height(scr.textHeight));
+                    else if (i == 8) scr.et = EditorGUILayout.TextArea(scr.et, GUILayout.Height(scr.textHeight));
+                    else if (i == 9) scr.fr = EditorGUILayout.TextArea(scr.fr, GUILayout.Height(scr.textHeight));
+                    else if (i == 10) scr.kk = EditorGUILayout.TextArea(scr.kk, GUILayout.Height(scr.textHeight));
+                    else if (i == 11) scr.ky = EditorGUILayout.TextArea(scr.ky, GUILayout.Height(scr.textHeight));
+                    else if (i == 12) scr.lt = EditorGUILayout.TextArea(scr.lt, GUILayout.Height(scr.textHeight));
+                    else if (i == 13) scr.lv = EditorGUILayout.TextArea(scr.lv, GUILayout.Height(scr.textHeight));
+                    else if (i == 14) scr.ro = EditorGUILayout.TextArea(scr.ro, GUILayout.Height(scr.textHeight));
+                    else if (i == 15) scr.tg = EditorGUILayout.TextArea(scr.tg, GUILayout.Height(scr.textHeight));
+                    else if (i == 16) scr.tk = EditorGUILayout.TextArea(scr.tk, GUILayout.Height(scr.textHeight));
+                    else if (i == 17) scr.uk = EditorGUILayout.TextArea(scr.uk, GUILayout.Height(scr.textHeight));
+                    else if (i == 18) scr.uz = EditorGUILayout.TextArea(scr.uz, GUILayout.Height(scr.textHeight));
+                    else if (i == 19) scr.es = EditorGUILayout.TextArea(scr.es, GUILayout.Height(scr.textHeight));
+                    else if (i == 20) scr.pt = EditorGUILayout.TextArea(scr.pt, GUILayout.Height(scr.textHeight));
+                    else if (i == 21) scr.ar = EditorGUILayout.TextArea(scr.ar, GUILayout.Height(scr.textHeight));
+                    else if (i == 22) scr.id = EditorGUILayout.TextArea(scr.id, GUILayout.Height(scr.textHeight));
+                    else if (i == 23) scr.ja = EditorGUILayout.TextArea(scr.ja, GUILayout.Height(scr.textHeight));
+                    else if (i == 24) scr.it = EditorGUILayout.TextArea(scr.it, GUILayout.Height(scr.textHeight));
+                    else if (i == 25) scr.de = EditorGUILayout.TextArea(scr.de, GUILayout.Height(scr.textHeight));
+                    else if (i == 26) scr.hi = EditorGUILayout.TextArea(scr.hi, GUILayout.Height(scr.textHeight));
 
-            if (scr.infoYG.languages.tr)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("tr", GUILayout.Width(20), GUILayout.Height(20));
-                scr.tr = EditorGUILayout.TextArea(scr.tr, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.az)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("az", GUILayout.Width(20), GUILayout.Height(20));
-                scr.az = EditorGUILayout.TextArea(scr.az, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.be)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("be", GUILayout.Width(20), GUILayout.Height(20));
-                scr.be = EditorGUILayout.TextArea(scr.be, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.he)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("he", GUILayout.Width(20), GUILayout.Height(20));
-                scr.he = EditorGUILayout.TextArea(scr.he, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.hy)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("hy", GUILayout.Width(20), GUILayout.Height(20));
-                scr.hy = EditorGUILayout.TextArea(scr.hy, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.ka)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("ka", GUILayout.Width(20), GUILayout.Height(20));
-                scr.ka = EditorGUILayout.TextArea(scr.ka, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.et)
-            {
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("et", GUILayout.Width(20), GUILayout.Height(20));
-                scr.et = EditorGUILayout.TextArea(scr.et, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.fr)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("fr", GUILayout.Width(20), GUILayout.Height(20));
-                scr.fr = EditorGUILayout.TextArea(scr.fr, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.kk)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("kk", GUILayout.Width(20), GUILayout.Height(20));
-                scr.kk = EditorGUILayout.TextArea(scr.kk, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.ky)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("ky", GUILayout.Width(20), GUILayout.Height(20));
-                scr.ky = EditorGUILayout.TextArea(scr.ky, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.lt)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("lt", GUILayout.Width(20), GUILayout.Height(20));
-                scr.lt = EditorGUILayout.TextArea(scr.lt, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.lv)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("lv", GUILayout.Width(20), GUILayout.Height(20));
-                scr.lv = EditorGUILayout.TextArea(scr.lv, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.ro)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("ro", GUILayout.Width(20), GUILayout.Height(20));
-                scr.ro = EditorGUILayout.TextArea(scr.ro, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.tg)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("tg", GUILayout.Width(20), GUILayout.Height(20));
-                scr.tg = EditorGUILayout.TextArea(scr.tg, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.tk)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("tk", GUILayout.Width(20), GUILayout.Height(20));
-                scr.tk = EditorGUILayout.TextArea(scr.tk, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.uk)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("uk", GUILayout.Width(20), GUILayout.Height(20));
-                scr.uk = EditorGUILayout.TextArea(scr.uk, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
-            }
-
-            if (scr.infoYG.languages.uz)
-            {
-                processTranslateLabel++;
-                GUILayout.BeginHorizontal();
-                GUILayout.Label("uz", GUILayout.Width(20), GUILayout.Height(20));
-                scr.uz = EditorGUILayout.TextArea(scr.uz, GUILayout.Height(scr.textHeight));
-                GUILayout.EndHorizontal();
+                    GUILayout.EndHorizontal();
+                }
             }
         }
 
